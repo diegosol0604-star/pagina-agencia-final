@@ -35,6 +35,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="es"
+      data-scroll-behavior="smooth"
       className={`${cormorant.variable} ${syne.variable} ${dmSans.variable} h-full`}
     >
       <body className="min-h-full flex flex-col">
