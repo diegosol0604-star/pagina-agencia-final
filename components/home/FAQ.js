@@ -11,7 +11,7 @@ export function FAQ() {
 
   return (
     <section className="section-pad bg-surface" id="faq" aria-labelledby="faq-heading">
-      <div className="mx-auto grid min-h-[560px] max-w-[1200px] grid-cols-1 md:grid-cols-2">
+      <div className="mx-auto grid min-h-[560px] max-w-[1200px] grid-cols-1 md:grid-cols-2 max-md:min-h-0">
         <div className="bg-surface pr-0 md:pr-[var(--space-xl)]">
           <FadeIn>
             <SectionLabel>Dudas frecuentes</SectionLabel>
