@@ -30,7 +30,7 @@ export function Hero() {
       <div className="relative z-[1] flex flex-col items-center justify-center pb-[1%] pt-[calc(var(--space-2xl)+3rem)] text-center max-md:order-2 max-md:w-full max-md:pt-0">
         <p className="relative z-[1] mb-[2%] font-display text-[clamp(100px,10vw,150px)] font-normal italic leading-[0.92] tracking-[-0.03em] text-flow-text max-xl:text-[clamp(110px,9vw,140px)] max-lg:text-[clamp(90px,8vw,120px)] max-md:mb-[var(--space-lg)] max-md:text-[clamp(3.5rem,15vw,6rem)]" aria-hidden="true">
           <span className="animate-brand-in block">Flow Studio</span>
-          <span className="animate-brand-in-delay mt-[0.2em] block text-[clamp(60px,6vw,85px)] tracking-[-0.01em] max-xl:text-[clamp(65px,5.5vw,80px)] max-lg:text-[clamp(55px,5vw,70px)]">
+          <span className="animate-brand-in-delay mt-[0.2em] block text-[clamp(60px,6vw,85px)] tracking-[-0.01em] max-xl:text-[clamp(65px,5.5vw,80px)] max-lg:text-[clamp(55px,5vw,70px)] max-md:text-[clamp(1.25rem,5.5vw,1.9rem)]">
             Agencia de Marketing e IA
           </span>
         </p>

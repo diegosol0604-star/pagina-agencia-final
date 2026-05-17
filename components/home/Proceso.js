@@ -46,9 +46,7 @@ export function Proceso() {
             <div
               key={step.num}
               role="listitem"
-              className={`relative z-[1] border-flow-border p-[var(--space-lg)] px-[var(--space-md)] transition-colors hover:bg-surface ${
-                i < steps.length - 1 ? "border-r max-lg:border-r-0 max-sm:border-b sm:border-r" : ""
-              } max-sm:border-b max-sm:last:border-b-0`}
+              className={`relative z-[1] border-flow-border p-[var(--space-lg)] px-[var(--space-md)] transition-colors hover:bg-surface ${i === 0 ? "sm:border-r" : ""} ${i === 1 ? "sm:border-r-0 lg:border-r" : ""} ${i === 2 ? "sm:border-r" : ""} ${i === 0 || i === 1 ? "sm:border-b max-lg:border-b-0" : ""} ${i < 3 ? "max-sm:border-b" : ""}`}
               style={{ transitionDelay: `${step.delay}ms` }}
             >
               <div
