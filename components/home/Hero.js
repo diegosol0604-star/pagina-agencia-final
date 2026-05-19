@@ -14,7 +14,7 @@ export function Hero() {
         aria-hidden="true"
       />
 
-      <div
+<div
         className="animate-hero-card-in absolute right-[var(--space-md)] top-[var(--space-lg)] z-[2] mt-[0.1%] min-h-[150px] w-[min(440px,calc(100%-var(--space-md)*2))] max-w-[440px] text-justify max-xl:top-[var(--space-md)] max-xl:max-w-[380px] max-lg:top-[var(--space-sm)] max-lg:max-w-[320px] max-md:static max-md:order-1 max-md:mb-0 max-md:w-full max-md:max-w-full max-md:min-h-0 max-md:text-center"
         aria-hidden="true"
       >
@@ -54,9 +54,6 @@ export function Hero() {
         <h1 className="animate-hero-text-in min-h-[2.2em] font-display text-[clamp(2.5rem,5.5vw,4.5rem)] font-normal italic leading-[1.1] tracking-[-0.02em] text-flow-text max-md:text-center">
           Convierte tus ideas en sistemas que <Typewriter />
         </h1>
-        <p className="hidden shrink-0 items-center gap-2 pb-1 font-body text-[0.7rem] uppercase tracking-[0.1em] text-flow-muted before:block before:h-px before:w-7 before:bg-border-dark max-md:hidden md:flex">
-          Scroll
-        </p>
       </div>
     </section>
   );
