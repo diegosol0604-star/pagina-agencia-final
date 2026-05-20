@@ -1,5 +1,6 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeading, SectionLabel } from "@/components/ui/SectionHeader";
+import { ParallaxOrb } from "@/components/ui/ParallaxOrb";
 
 const items = [
   "Soluciones pensadas para negocios mexicanos",
@@ -19,7 +20,8 @@ const stats = [
 
 export function Diferenciadores() {
   return (
-    <section className="section-pad bg-surface" id="diferenciadores" aria-labelledby="dif-heading">
+    <section className="section-pad relative overflow-hidden bg-surface" id="diferenciadores" aria-labelledby="dif-heading">
+      <ParallaxOrb className="h-[400px] w-[400px] -left-[8%] bottom-[10%] bg-[radial-gradient(ellipse_at_center,oklch(0.45_0.2_260/0.22)_0%,transparent_70%)]" />
       <div className="section-inner">
         <FadeIn>
           <SectionLabel>¿Por qué nosotros?</SectionLabel>

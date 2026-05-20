@@ -2,6 +2,7 @@ import { BtnGhost, BtnPrimary } from "@/components/ui/Buttons";
 import { ArrowRightIcon, WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { WHATSAPP } from "@/lib/site";
 import { Typewriter } from "./Typewriter";
+import { HeroTitles } from "./HeroTitles";
 
 export function Hero() {
   return (
@@ -9,10 +10,6 @@ export function Hero() {
       className="relative grid min-h-[96vh] grid-rows-[1fr_auto] overflow-hidden px-[var(--space-md)] pb-[var(--space-2xl)] pt-[var(--space-xl)] max-md:flex max-md:min-h-0 max-md:flex-col max-md:items-center max-md:justify-center max-md:gap-[var(--space-lg)] max-md:py-[var(--space-xl)]"
       aria-label="Encabezado principal"
     >
-      <div
-        className="animate-hero-drift absolute inset-0 z-0 bg-[radial-gradient(ellipse_80%_60%_at_70%_30%,oklch(100%_0.00011_271.152/0.22)_0%,transparent_60%),radial-gradient(ellipse_60%_50%_at_20%_80%,oklch(0.88_0.08_260/0.15)_0%,transparent_55%),var(--bg)]"
-        aria-hidden="true"
-      />
 
 <div
         className="animate-hero-card-in absolute right-[var(--space-md)] top-[var(--space-lg)] z-[2] mt-[0.1%] min-h-[150px] w-[min(440px,calc(100%-var(--space-md)*2))] max-w-[440px] text-justify max-xl:top-[var(--space-md)] max-xl:max-w-[380px] max-lg:top-[var(--space-sm)] max-lg:max-w-[320px] max-md:static max-md:order-1 max-md:mb-0 max-md:w-full max-md:max-w-full max-md:min-h-0 max-md:text-center"
@@ -28,12 +25,7 @@ export function Hero() {
       </div>
 
       <div className="relative z-[1] flex flex-col items-center justify-center pb-[1%] pt-[calc(var(--space-2xl)+3rem)] text-center max-md:order-2 max-md:w-full max-md:pt-0">
-        <p className="relative z-[1] mb-[2%] font-display text-[clamp(100px,10vw,150px)] font-normal italic leading-[0.92] tracking-[-0.03em] text-flow-text max-xl:text-[clamp(110px,9vw,140px)] max-lg:text-[clamp(90px,8vw,120px)] max-md:mb-[var(--space-lg)] max-md:text-[clamp(3.5rem,15vw,6rem)]" aria-hidden="true">
-          <span className="animate-brand-in block">Flow Studio</span>
-          <span className="animate-brand-in-delay mt-[0.2em] block text-[clamp(60px,6vw,85px)] tracking-[-0.01em] max-xl:text-[clamp(65px,5.5vw,80px)] max-lg:text-[clamp(55px,5vw,70px)] max-md:text-[clamp(1.25rem,5.5vw,1.9rem)]">
-            Agencia de Marketing e IA
-          </span>
-        </p>
+        <HeroTitles />
         <div className="relative z-[1] flex flex-col items-center gap-[var(--space-md)]">
           <BtnPrimary
             href={WHATSAPP.main}
