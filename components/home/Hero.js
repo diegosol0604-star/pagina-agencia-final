@@ -19,7 +19,7 @@ export function Hero() {
           Marketing Digital &amp; IA Agency México
         </span>
         <p className="absolute right-[8%] top-20 m-0 max-w-[405px] font-body text-[0.99rem] font-light leading-[1.65] text-flow-muted max-xl:right-[6%] max-xl:top-[68px] max-xl:max-w-[340px] max-xl:text-[0.9rem] max-lg:right-[4%] max-lg:top-[58px] max-lg:max-w-[280px] max-lg:text-[0.85rem] max-md:static max-md:mt-[var(--space-sm)] max-md:max-w-none">
-          Diseñamos paginas web, branding y rebranding, automatizaciones, campañas de marketing y más. Sin
+          Diseñamos páginas web, branding y rebranding, automatizaciones, campañas de marketing y más. Sin
           tecnicismos, con resultados concretos.
         </p>
       </div>

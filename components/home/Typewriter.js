@@ -35,9 +35,11 @@ export function Typewriter() {
       }, SPEED_DEL);
     } else {
       const nextWord = (wordIndex + 1) % TYPEWRITER_WORDS.length;
-      setDeleting(false);
-      setWordIndex(nextWord);
-      setCharIndex(0);
+      timeout = setTimeout(() => {
+        setDeleting(false);
+        setWordIndex(nextWord);
+        setCharIndex(0);
+      }, SPEED_TYPE);
     }
 
     return () => clearTimeout(timeout);
