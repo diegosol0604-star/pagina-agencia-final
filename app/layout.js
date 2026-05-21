@@ -2,6 +2,7 @@ import { Cormorant_Garamond, DM_Sans, Syne } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/layout/Nav";
 import { SkipLink } from "@/components/layout/SkipLink";
+import { SplashScreen } from "@/components/layout/SplashScreen";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
       className={`${cormorant.variable} ${syne.variable} ${dmSans.variable} h-full`}
     >
       <body className="min-h-full flex flex-col">
+        <SplashScreen />
         <SkipLink />
         <Nav />
         {children}

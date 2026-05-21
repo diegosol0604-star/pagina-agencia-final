@@ -176,27 +176,39 @@
 
 
 .animate-brand-in {
-  animation: brand-fade-in 0.9s cubic-bezier(0.25, 0, 0, 1) 0.1s both;
+  animation: brand-fade-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
 }
 
 .animate-brand-in-delay {
-  animation: brand-fade-in 0.9s cubic-bezier(0.25, 0, 0, 1) 0.5s both;
+  animation: brand-fade-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
 }
 
 .animate-hero-text-in {
-  animation: hero-text-in 0.9s cubic-bezier(0.25, 0, 0, 1) 0.35s both;
+  animation: hero-text-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
 }
 
 .animate-hero-text-in-delay-1 {
-  animation: hero-text-in 0.9s cubic-bezier(0.25, 0, 0, 1) 0.6s both;
+  animation: hero-text-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
 }
 
 .animate-hero-text-in-delay-2 {
-  animation: hero-text-in 0.9s cubic-bezier(0.25, 0, 0, 1) 0.78s both;
+  animation: hero-text-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.78s both;
 }
 
 .animate-hero-card-in {
-  animation: hero-card-in 0.9s cubic-bezier(0.25, 0, 0, 1) 0.15s both;
+  animation: hero-card-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+/* ── Splash coordination: ocultar hero hasta que el splash termine ── */
+/* Se activan cuando SplashScreen añade data-splash-done="1" al <body> */
+body:not([data-splash-done]) .animate-brand-in,
+body:not([data-splash-done]) .animate-brand-in-delay,
+body:not([data-splash-done]) .animate-hero-text-in,
+body:not([data-splash-done]) .animate-hero-text-in-delay-1,
+body:not([data-splash-done]) .animate-hero-text-in-delay-2,
+body:not([data-splash-done]) .animate-hero-card-in {
+  opacity: 0;
+  animation: none;
 }
 
 .animate-cursor-blink {

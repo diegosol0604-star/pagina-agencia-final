@@ -5,7 +5,12 @@ import { TipoCard } from "./TipoCard";
 
 export function TiposGrid() {
   return (
-    <section className="section-pad bg-bg" id="tipos" aria-labelledby="tipos-heading">
+    <section
+      className="section-pad bg-bg"
+      id="tipos"
+      aria-labelledby="tipos-heading"
+      style={{ position: "relative", minHeight: "auto", paddingBottom: "clamp(5rem, 10vw, 8rem)" }}
+    >
       <div className="section-inner">
         <FadeIn>
           <SectionLabel>Nuestras soluciones</SectionLabel>
