@@ -71,9 +71,9 @@ export function Nav() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block w-full whitespace-nowrap rounded-[var(--radius)] bg-flow-text px-5 py-2 text-center font-body text-sm font-medium text-[var(--nav-cta-color)] transition-[background,transform] hover:-translate-y-px hover:bg-accent focus-visible:bg-accent max-md:py-3 md:hidden"
-              aria-label="Hablar con un asesor por WhatsApp"
+              aria-label="Haz crecer tu negocio por WhatsApp"
             >
-              Hablar con un asesor
+              Haz crecer tu negocio
             </a>
           </li>
         </ul>
@@ -83,9 +83,9 @@ export function Nav() {
           target="_blank"
           rel="noopener noreferrer"
           className="hidden whitespace-nowrap rounded-[var(--radius)] bg-flow-text px-5 py-2 font-body text-sm font-medium text-[var(--nav-cta-color)] transition-[background,transform] hover:-translate-y-px hover:bg-accent focus-visible:bg-accent md:inline-block"
-          aria-label="Hablar con un asesor por WhatsApp"
+          aria-label="Haz crecer tu negocio por WhatsApp"
         >
-          Hablar con un asesor
+          Haz crecer tu negocio
         </a>
 
         <button

@@ -18,7 +18,7 @@ export function FadeIn({ children, className = "", delayMs = 0 }) {
           }
         });
       },
-      { threshold: 0.12 },
+      { threshold: 0.08 },
     );
 
     observer.observe(el);

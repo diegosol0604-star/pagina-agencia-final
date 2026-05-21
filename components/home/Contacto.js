@@ -2,10 +2,12 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeading, SectionLabel } from "@/components/ui/SectionHeader";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { EMAIL, WHATSAPP } from "@/lib/site";
+import { ParallaxOrb } from "@/components/ui/ParallaxOrb";
 
 export function Contacto() {
   return (
-    <section className="section-pad bg-flow-text" id="contacto" aria-labelledby="contacto-heading">
+    <section className="section-pad relative overflow-hidden bg-flow-text" id="contacto" aria-labelledby="contacto-heading">
+      <ParallaxOrb className="h-[450px] w-[450px] right-[5%] top-[5%] bg-[radial-gradient(ellipse_at_center,oklch(0.88_0.08_175/0.18)_0%,transparent_70%)]" />
       <div className="section-inner">
         <div className="grid grid-cols-1 items-start gap-[var(--space-2xl)] md:grid-cols-2">
           <FadeIn>

@@ -29,8 +29,7 @@ export function FAQ() {
                 <button
                   key={item.id}
                   type="button"
-                  role="listitem"
-                  aria-selected={isActive}
+                  aria-pressed={isActive}
                   className={`relative flex w-full items-center justify-between gap-[var(--space-md)] border-b border-flow-border py-[var(--space-md)] text-left font-body text-[0.9rem] transition-colors before:absolute before:bottom-0 before:left-[calc(-1*var(--space-md))] before:top-0 before:w-0.5 before:origin-center before:bg-accent before:transition-transform hover:text-flow-text focus-visible:rounded-[var(--radius)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
                     isActive
                       ? "font-medium text-flow-text before:scale-y-100"
