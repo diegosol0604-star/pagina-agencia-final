@@ -26,7 +26,7 @@ export function NuevaSeccion() {
           </motion.span>
           <TextRotate
             texts={WORDS}
-            mainClassName="text-bg px-4 py-1 bg-flow-text overflow-hidden rounded-[4px] justify-center"
+            mainClassName="text-bg px-4 py-1 bg-[oklch(0.63_0.18_42)] overflow-hidden rounded-[4px] justify-center"
             staggerFrom="last"
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
