@@ -15,7 +15,7 @@ export function Footer({
 }) {
   return (
     <footer
-      className="section-blue border-t border-[oklch(0.50_0.15_264)] px-[var(--space-md)] py-[var(--space-xl)] pb-[var(--space-lg)] text-white"
+      className="border-t border-[#06104f] bg-[#070e5a] px-[var(--space-md)] py-[var(--space-xl)] pb-[var(--space-lg)] text-white"
       aria-label="Pie de página"
     >
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-[var(--space-lg)] md:grid-cols-[2fr_1fr_1fr] md:gap-[var(--space-xl)]">
@@ -68,7 +68,7 @@ export function Footer({
       </div>
 
       <div
-        className="mx-auto mt-[var(--space-xl)] flex max-w-[1200px] flex-wrap items-center justify-between gap-[var(--space-sm)] border-t border-[oklch(0.50_0.15_264)] pt-[var(--space-md)] max-md:flex-col max-md:items-start"
+        className="mx-auto mt-[var(--space-xl)] flex max-w-[1200px] flex-wrap items-center justify-between gap-[var(--space-sm)] border-t border-[#06104f] pt-[var(--space-md)] max-md:flex-col max-md:items-start"
       >
         <p className="font-body text-[0.8rem] text-[oklch(0.78_0.04_264)]">&copy; 2026 Flow Studio. Todos los derechos reservados.</p>
         <p className="font-body text-[0.8rem] text-[oklch(0.78_0.04_264)]">México</p>

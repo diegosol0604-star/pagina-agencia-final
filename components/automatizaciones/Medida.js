@@ -40,28 +40,28 @@ export function Medida() {
                 </div>
               ))}
             </div>
-            <p className="border-t border-flow-border pt-[var(--space-md)] font-body text-[0.825rem] italic leading-relaxed text-flow-muted">
+            <p className="border-t border-white/20 pt-[var(--space-md)] font-body text-[0.825rem] italic leading-relaxed text-flow-muted">
               La cotización es personalizada — el precio depende del volumen de información a manejar y la complejidad
               del sistema. Escríbenos y lo platicamos sin compromiso.
             </p>
           </FadeIn>
 
           <FadeIn delayMs={80}>
-            <div className="rounded-[var(--radius)] border border-flow-border bg-bg p-[var(--space-xl)]">
-              <p className="font-heading mb-[var(--space-md)] text-xs font-bold uppercase tracking-[0.1em] text-flow-muted">
+            <div className="rounded-[var(--radius)] border border-[#e0e0e0] bg-white p-[var(--space-xl)]">
+              <p className="font-heading mb-[var(--space-md)] text-xs font-bold uppercase tracking-[0.1em] text-[#5b6273]">
                 ¿Cómo funciona el proceso?
               </p>
               <div className="flex flex-col gap-[var(--space-sm)]">
                 {MEDIDA_STEPS.map((step) => (
                   <div key={step.num} className="flex items-start gap-[var(--space-sm)]">
                     <div
-                      className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white font-display text-sm font-semibold italic text-blue"
+                      className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f0f2ff] font-display text-sm font-semibold italic text-[#0d1a9e]"
                       aria-hidden="true"
                     >
                       {step.num}
                     </div>
-                    <p className="pt-1 font-body text-[0.8rem] leading-[1.8] text-flow-muted">
-                      <strong className="font-medium text-flow-text">{step.lead}</strong>
+                    <p className="pt-1 font-body text-[0.8rem] leading-[1.8] text-[#5b6273]">
+                      <strong className="font-medium text-[#0a0d1f]">{step.lead}</strong>
                       {step.rest}
                     </p>
                   </div>

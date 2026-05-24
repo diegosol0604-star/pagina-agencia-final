@@ -34,21 +34,21 @@ export function QueSon() {
 
           <FadeIn delayMs={80}>
             <div
-              className="flex flex-col gap-[var(--space-md)] rounded-[var(--radius)] border border-flow-border bg-bg p-[var(--space-xl)]"
+              className="flex flex-col gap-[var(--space-md)] rounded-[var(--radius)] border border-[#e0e0e0] bg-white p-[var(--space-xl)]"
               role="img"
               aria-label="Diagrama de flujo de una automatización"
             >
               {FLOW_STEPS.map((step, i) => (
                 <div key={step.label}>
-                  <div className="flex items-center gap-[var(--space-md)] rounded-[var(--radius)] bg-surface px-[var(--space-md)] py-[var(--space-sm)] font-body text-sm text-flow-text">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal-light">
+                  <div className="flex items-center gap-[var(--space-md)] rounded-[var(--radius)] bg-[#f0f2ff] px-[var(--space-md)] py-[var(--space-sm)] font-body text-sm text-[#0a0d1f]">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#0d1a9e]">
                       <FlowStepIcon name={step.icon} />
                     </div>
                     <span>{step.label}</span>
                   </div>
                   {step.arrow && (
                     <p
-                      className="flex items-center gap-2 pl-[var(--space-md)] font-body text-xs uppercase tracking-[0.06em] text-flow-muted before:block before:h-6 before:w-px before:bg-border-dark"
+                      className="flex items-center gap-2 pl-[var(--space-md)] font-body text-xs uppercase tracking-[0.06em] text-[#5b6273] before:block before:h-6 before:w-px before:bg-[#c4c8d3]"
                       aria-hidden="true"
                     >
                       {step.arrow}

@@ -25,6 +25,7 @@ export function Contacto() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-fill-dark inline-flex items-center gap-2.5 rounded-[var(--radius)] border border-white/30 px-7 py-4 font-body text-[0.9375rem] font-medium text-white transition-[background,transform] hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-white"
+              style={{ backgroundImage: "linear-gradient(to right, #0a0d1f 50%, rgba(255,255,255,0.18) 50%)" }}
               aria-label="Abrir WhatsApp para contactar a Flow Studio"
             >
               <WhatsAppIcon size={20} />
@@ -32,7 +33,7 @@ export function Contacto() {
             </a>
             <a
               href={`mailto:${EMAIL}`}
-              className="mt-[var(--space-md)] block w-fit border-b border-flow-border pb-px font-body text-sm text-flow-muted transition-colors hover:text-white"
+              className="mt-[var(--space-md)] block w-fit border-b border-white/30 pb-px font-body text-sm text-flow-muted transition-colors hover:text-white"
             >
               {EMAIL}
             </a>
@@ -47,11 +48,11 @@ export function Contacto() {
               aria-label="Formulario de contacto Flow Studio"
             >
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="nombre" className="font-body text-[0.8rem] font-medium tracking-[0.04em] text-flow-muted">
+                <label htmlFor="nombre" className="font-body text-[0.8rem] font-medium tracking-[0.04em] text-white/70">
                   Nombre *
                 </label>
                 <input
-                  className="w-full rounded-[var(--radius)] border border-flow-border bg-surface px-4 py-3 font-body text-[0.9375rem] text-white transition-[border-color] placeholder:text-flow-muted focus:border-accent focus:outline-none"
+                  className="w-full rounded-[var(--radius)] border border-white/20 bg-white px-4 py-3 font-body text-[0.9375rem] text-[#0a0d1f] transition-[border-color] placeholder:text-gray-400 focus:border-white focus:outline-none"
                   type="text"
                   id="nombre"
                   name="nombre"
@@ -61,11 +62,11 @@ export function Contacto() {
                 />
               </div>
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="negocio" className="font-body text-[0.8rem] font-medium tracking-[0.04em] text-flow-muted">
+                <label htmlFor="negocio" className="font-body text-[0.8rem] font-medium tracking-[0.04em] text-white/70">
                   Nombre del negocio *
                 </label>
                 <input
-                  className="w-full rounded-[var(--radius)] border border-flow-border bg-surface px-4 py-3 font-body text-[0.9375rem] text-white transition-[border-color] placeholder:text-flow-muted focus:border-accent focus:outline-none"
+                  className="w-full rounded-[var(--radius)] border border-white/20 bg-white px-4 py-3 font-body text-[0.9375rem] text-[#0a0d1f] transition-[border-color] placeholder:text-gray-400 focus:border-white focus:outline-none"
                   type="text"
                   id="negocio"
                   name="negocio"
@@ -74,13 +75,13 @@ export function Contacto() {
                 />
               </div>
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="servicio" className="font-body text-[0.8rem] font-medium tracking-[0.04em] text-flow-muted">
+                <label htmlFor="servicio" className="font-body text-[0.8rem] font-medium tracking-[0.04em] text-white/70">
                   Servicio de interés
                 </label>
                 <select
-                  className="w-full cursor-pointer appearance-none rounded-[var(--radius)] border border-flow-border bg-surface bg-[length:12px_8px] bg-[position:right_1rem_center] bg-no-repeat px-4 py-3 pr-10 font-body text-[0.9375rem] text-white transition-[border-color] focus:border-accent focus:outline-none"
+                  className="w-full cursor-pointer appearance-none rounded-[var(--radius)] border border-white/20 bg-white bg-[length:12px_8px] bg-[position:right_1rem_center] bg-no-repeat px-4 py-3 pr-10 font-body text-[0.9375rem] text-[#0a0d1f] transition-[border-color] focus:border-white focus:outline-none"
                   style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23aaa' fill='none' stroke-width='1.5'/%3E%3C/svg%3E")`,
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' fill='none' stroke-width='1.5'/%3E%3C/svg%3E")`,
                   }}
                   id="servicio"
                   name="servicio"
@@ -96,11 +97,11 @@ export function Contacto() {
                 </select>
               </div>
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="mensaje" className="font-body text-[0.8rem] font-medium tracking-[0.04em] text-flow-muted">
+                <label htmlFor="mensaje" className="font-body text-[0.8rem] font-medium tracking-[0.04em] text-white/70">
                   Mensaje
                 </label>
                 <textarea
-                  className="min-h-[100px] w-full resize-y rounded-[var(--radius)] border border-flow-border bg-surface px-4 py-3 font-body text-[0.9375rem] text-white transition-[border-color] placeholder:text-flow-muted focus:border-accent focus:outline-none"
+                  className="min-h-[100px] w-full resize-y rounded-[var(--radius)] border border-white/20 bg-white px-4 py-3 font-body text-[0.9375rem] text-[#0a0d1f] transition-[border-color] placeholder:text-gray-400 focus:border-white focus:outline-none"
                   id="mensaje"
                   name="mensaje"
                   placeholder="Cuéntanos brevemente qué necesitas..."
@@ -109,6 +110,7 @@ export function Contacto() {
               <button
                 type="submit"
                 className="btn-fill-dark w-full cursor-pointer rounded-[var(--radius)] border border-white/30 px-7 py-3.5 font-body text-[0.9375rem] font-medium text-white transition-[background,transform] hover:-translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-white"
+                style={{ backgroundImage: "linear-gradient(to right, #0a0d1f 50%, rgba(255,255,255,0.18) 50%)" }}
               >
                 Enviar mensaje
               </button>

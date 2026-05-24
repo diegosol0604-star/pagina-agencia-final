@@ -20,7 +20,8 @@ export function FooterCta() {
           href={WHATSAPP.autoHelp}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-fill-dark inline-flex items-center gap-2.5 rounded-[var(--radius)] bg-blue px-8 py-4 font-body text-base font-medium text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-white"
+          className="btn-fill-dark inline-flex items-center gap-2.5 rounded-[var(--radius)] border border-white/30 px-8 py-4 font-body text-base font-medium text-white transition-[background,transform] hover:-translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-white"
+          style={{ backgroundImage: "linear-gradient(to right, #0a0d1f 50%, rgba(255,255,255,0.18) 50%)" }}
           aria-label="Contactar a Flow Studio por WhatsApp para automatizar tu negocio"
         >
           <WhatsAppIcon size={20} />

@@ -6,14 +6,14 @@
   --surface-2: #e8e8e8;
   --text: #0a0d1f;
   --text-muted: #5b6273;
-  --accent: #1730d0;
-  --accent-hover: #1731c7;
-  --teal: #1730d0;
+  --accent: #0d1a9e;
+  --accent-hover: #0c199a;
+  --teal: #0d1a9e;
   --teal-light: #f2f2f2;
   --border: #e0e0e0;
   --border-dark: #c4c8d3;
   --nav-cta-color: #ffffff;
-  --blue: #1730d0;
+  --blue: #0d1a9e;
   --blue-dark: #0f1857;
   --radius: 3px;
   --transition: 220ms cubic-bezier(0.25, 0, 0, 1);
@@ -153,7 +153,7 @@
     background-image: linear-gradient(
       to right,
       #0a0d1f 50%,
-      #1730d0 50%
+      #0d1a9e 50%
     );
     background-size: 200% 100%;
     background-position: 100% 0;
@@ -179,14 +179,14 @@
 
   /* ── Tema de sección: azul rey ── */
   .section-blue {
-    background-color: #1730d0;
+    background-color: #0d1a9e;
     --text: #ffffff;
     --text-muted: #d8dcef;
     --teal: #ffffff;
-    --teal-light: #1731c7;
+    --teal-light: #0c199a;
     --border: #4a5cf0;
     --border-dark: #5d6ff0;
-    --surface: #1731c7;
+    --surface: #0c199a;
     --surface-2: #1428a8;
     --accent: #ffffff;
     --accent-hover: #e5e7eb;
@@ -203,8 +203,8 @@
     --border-dark: #353f72;
     --surface: #1a2354;
     --surface-2: #161e48;
-    --accent: #1730d0;
-    --accent-hover: #1731c7;
+    --accent: #0d1a9e;
+    --accent-hover: #0c199a;
   }
 }
 

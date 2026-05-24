@@ -107,7 +107,7 @@ export function Nav() {
   // Colores explícitos en hex para evitar problemas de cascada/variables/conversión OKLCH.
   const COLOR_DARK = "#0a0d1f";
   const COLOR_WHITE = "#ffffff";
-  const COLOR_BLUE = "#1730d0";
+  const COLOR_BLUE = "#0d1a9e";
 
   const logoColor = onBlue ? COLOR_WHITE : COLOR_DARK;
   const linkColor = onBlue ? COLOR_WHITE : COLOR_BLUE;
