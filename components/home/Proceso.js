@@ -30,7 +30,7 @@ const steps = [
 
 export function Proceso() {
   return (
-    <section className="section-pad border-t border-flow-border bg-bg" id="proceso" aria-labelledby="proceso-heading">
+    <section className="section-pad section-blue" id="proceso" aria-labelledby="proceso-heading">
       <div className="section-inner">
         <FadeIn>
           <SectionLabel>Cómo trabajamos</SectionLabel>
@@ -46,11 +46,11 @@ export function Proceso() {
             <div
               key={step.num}
               role="listitem"
-              className={`relative z-[1] border-flow-border p-[var(--space-lg)] px-[var(--space-md)] transition-colors hover:bg-surface ${i === 0 ? "sm:border-r" : ""} ${i === 1 ? "sm:border-r-0 lg:border-r" : ""} ${i === 2 ? "sm:border-r" : ""} ${i < 3 ? "max-sm:border-b" : ""}`}
+              className={`step-fill-subtle relative z-[1] border-flow-border p-[var(--space-lg)] px-[var(--space-md)] ${i === 0 ? "sm:border-r" : ""} ${i === 1 ? "sm:border-r-0 lg:border-r" : ""} ${i === 2 ? "sm:border-r" : ""} ${i < 3 ? "max-sm:border-b" : ""}`}
               style={{ transitionDelay: `${step.delay}ms` }}
             >
               <div
-                className="mb-[var(--space-md)] inline-flex h-12 w-12 items-center justify-center rounded-full border border-border-dark bg-bg font-display text-[1.1rem] font-semibold italic text-flow-text"
+                className="mb-[var(--space-md)] inline-flex h-12 w-12 items-center justify-center rounded-full border border-border-dark bg-bg font-display text-[1.1rem] font-semibold italic text-blue"
                 aria-hidden="true"
               >
                 {step.num}

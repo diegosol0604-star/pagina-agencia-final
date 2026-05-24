@@ -104,10 +104,10 @@ export function Nav() {
     return () => document.removeEventListener("click", onClick);
   }, []);
 
-  // Colores explícitos en oklch() para evitar problemas de cascada/variables CSS.
-  const COLOR_DARK = "oklch(0.10 0.015 264)";
-  const COLOR_WHITE = "oklch(1 0 0)";
-  const COLOR_BLUE = "oklch(0.40 0.28 264)";
+  // Colores explícitos en hex para evitar problemas de cascada/variables/conversión OKLCH.
+  const COLOR_DARK = "#0a0d1f";
+  const COLOR_WHITE = "#ffffff";
+  const COLOR_BLUE = "#1e40ef";
 
   const logoColor = onBlue ? COLOR_WHITE : COLOR_DARK;
   const linkColor = onBlue ? COLOR_WHITE : COLOR_BLUE;

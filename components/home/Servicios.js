@@ -56,7 +56,7 @@ const services = [
   },
   {
     num: "05",
-    span: "col-span-4 max-[900px]:col-span-6 max-[540px]:col-span-12",
+    span: "col-span-4 max-[900px]:col-span-12 max-[540px]:col-span-12",
     icon: (
       <svg className="mb-[var(--space-md)] h-9 w-9 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
         <circle cx="11" cy="11" r="8" />
@@ -71,7 +71,7 @@ const services = [
 
 export function Servicios() {
   return (
-    <section className="section-pad bg-surface" id="servicios" aria-labelledby="servicios-heading">
+    <section className="section-pad bg-bg" id="servicios" aria-labelledby="servicios-heading">
       <div className="section-inner">
         <FadeIn className="mb-[var(--space-xl)] flex flex-wrap items-end justify-between gap-[var(--space-md)]">
           <div>
@@ -87,7 +87,7 @@ export function Servicios() {
             <FadeIn
               key={s.num}
               delayMs={s.delay}
-              className={`relative overflow-hidden bg-surface p-[var(--space-xl)] px-[var(--space-lg)] transition-[background,transform] hover:bg-bg ${s.span}`}
+              className={`relative overflow-hidden bg-bg p-[var(--space-xl)] px-[var(--space-lg)] transition-[background,transform] hover:bg-surface ${s.span}`}
             >
               <article role="listitem">
                 <span className="font-display absolute right-[var(--space-md)] top-[var(--space-md)] text-5xl font-normal italic leading-none text-flow-border" aria-hidden="true">

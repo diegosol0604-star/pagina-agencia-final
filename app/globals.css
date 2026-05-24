@@ -1,20 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --bg: oklch(1 0 0);
-  --surface: oklch(0.95 0 0);
-  --surface-2: oklch(0.91 0 0);
-  --text: oklch(0.10 0.015 264);
-  --text-muted: oklch(0.42 0.03 264);
-  --accent: oklch(0.40 0.28 264);
-  --accent-hover: oklch(0.32 0.28 264);
-  --teal: oklch(0.40 0.28 264);
-  --teal-light: oklch(0.95 0 0);
-  --border: oklch(0.90 0 0);
-  --border-dark: oklch(0.80 0.02 264);
-  --nav-cta-color: oklch(1 0 0);
-  --blue: oklch(0.40 0.28 264);
-  --blue-dark: oklch(0.13 0.07 264);
+  --bg: #ffffff;
+  --surface: #f2f2f2;
+  --surface-2: #e8e8e8;
+  --text: #0a0d1f;
+  --text-muted: #5b6273;
+  --accent: #1e40ef;
+  --accent-hover: #1731c7;
+  --teal: #1e40ef;
+  --teal-light: #f2f2f2;
+  --border: #e0e0e0;
+  --border-dark: #c4c8d3;
+  --nav-cta-color: #ffffff;
+  --blue: #1e40ef;
+  --blue-dark: #0f1857;
   --radius: 3px;
   --transition: 220ms cubic-bezier(0.25, 0, 0, 1);
 
@@ -152,8 +152,8 @@
   .btn-fill-dark {
     background-image: linear-gradient(
       to right,
-      oklch(0.10 0.015 264) 50%,
-      oklch(0.40 0.28 264) 50%
+      #0a0d1f 50%,
+      #1e40ef 50%
     );
     background-size: 200% 100%;
     background-position: 100% 0;
@@ -179,32 +179,32 @@
 
   /* ── Tema de sección: azul rey ── */
   .section-blue {
-    background-color: var(--blue);
-    --text: oklch(1 0 0);
-    --text-muted: oklch(0.85 0.02 264);
-    --teal: oklch(1 0 0);
-    --teal-light: oklch(0.32 0.24 264);
-    --border: oklch(0.50 0.15 264);
-    --border-dark: oklch(0.55 0.18 264);
-    --surface: oklch(0.32 0.24 264);
-    --surface-2: oklch(0.28 0.20 264);
-    --accent: oklch(0.96 0 0);
-    --accent-hover: oklch(0.90 0 0);
+    background-color: #1e40ef;
+    --text: #ffffff;
+    --text-muted: #d8dcef;
+    --teal: #ffffff;
+    --teal-light: #1731c7;
+    --border: #4a5cf0;
+    --border-dark: #5d6ff0;
+    --surface: #1731c7;
+    --surface-2: #1428a8;
+    --accent: #ffffff;
+    --accent-hover: #e5e7eb;
   }
 
   /* ── Tema de sección: navy oscuro ── */
   .section-dark {
-    background-color: var(--blue-dark);
-    --text: oklch(0.95 0.006 264);
-    --text-muted: oklch(0.65 0.04 264);
-    --teal: oklch(0.60 0.18 264);
-    --teal-light: oklch(0.20 0.07 264);
-    --border: oklch(0.22 0.06 264);
-    --border-dark: oklch(0.28 0.06 264);
-    --surface: oklch(0.18 0.07 264);
-    --surface-2: oklch(0.16 0.06 264);
-    --accent: oklch(0.40 0.28 264);
-    --accent-hover: oklch(0.32 0.28 264);
+    background-color: #0f1857;
+    --text: #f5f7fa;
+    --text-muted: #98a0b8;
+    --teal: #5d6ff0;
+    --teal-light: #1a2354;
+    --border: #2a3568;
+    --border-dark: #353f72;
+    --surface: #1a2354;
+    --surface-2: #161e48;
+    --accent: #1e40ef;
+    --accent-hover: #1731c7;
   }
 }
 
