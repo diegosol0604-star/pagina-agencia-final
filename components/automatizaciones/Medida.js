@@ -4,12 +4,12 @@ import { MEDIDA_EXAMPLES, MEDIDA_STEPS } from "@/lib/automatizaciones-data";
 
 export function Medida() {
   return (
-    <section className="section-pad bg-surface" id="medida" aria-labelledby="medida-heading">
+    <section className="section-pad section-blue" id="medida" aria-labelledby="medida-heading">
       <div className="section-inner">
         <div className="grid grid-cols-1 items-center gap-[var(--space-2xl)] md:grid-cols-2">
           <FadeIn>
             <span
-              className="mb-[var(--space-md)] inline-flex items-center gap-2 rounded-[2px] bg-[oklch(0.93_0.06_260)] px-3.5 py-1.5 font-body text-xs font-medium uppercase tracking-[0.1em] text-accent"
+              className="mb-[var(--space-md)] inline-flex items-center gap-2 rounded-[2px] bg-[oklch(1_0_0/0.15)] px-3.5 py-1.5 font-body text-xs font-medium uppercase tracking-[0.1em] text-white"
               aria-label="Servicio personalizado"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
@@ -31,7 +31,7 @@ export function Medida() {
               {MEDIDA_EXAMPLES.map((example) => (
                 <div
                   key={example}
-                  className="flex items-center gap-[var(--space-sm)] rounded-[var(--radius)] border-l-2 border-teal bg-bg px-[var(--space-md)] py-3 font-body text-sm text-flow-text"
+                  className="flex items-center gap-[var(--space-sm)] rounded-[var(--radius)] border-l-2 border-blue bg-bg px-[var(--space-md)] py-3 font-body text-sm text-[oklch(0.10_0.015_264)]"
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                     <polyline points="20 6 9 17 4 12" />
@@ -55,7 +55,7 @@ export function Medida() {
                 {MEDIDA_STEPS.map((step) => (
                   <div key={step.num} className="flex items-start gap-[var(--space-sm)]">
                     <div
-                      className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-flow-text font-display text-sm font-semibold italic text-bg"
+                      className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white font-display text-sm font-semibold italic text-blue"
                       aria-hidden="true"
                     >
                       {step.num}

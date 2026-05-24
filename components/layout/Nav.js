@@ -15,28 +15,117 @@ const links = [
 export function Nav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const [onBlue, setOnBlue] = useState(false);
   const navRef = useRef(null);
+  const lastScrollY = useRef(0);
 
+  // Ocultar/mostrar al hacer scroll
+  useEffect(() => {
+    const onScroll = () => {
+      const currentY = window.scrollY;
+      if (currentY < 80) {
+        setHidden(false);
+      } else if (currentY > lastScrollY.current) {
+        setHidden(true);
+        setOpen(false);
+      } else {
+        setHidden(false);
+      }
+      lastScrollY.current = currentY;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Detectar qué sección está visualmente bajo el nav usando elementsFromPoint
+  useEffect(() => {
+    const NAV_H = 64;
+    let rafId = null;
+
+    const checkSection = () => {
+      const x = window.innerWidth / 2;
+      const y = NAV_H / 2;
+      const els = document.elementsFromPoint(x, y);
+      if (!els?.length) return;
+
+      let section = null;
+      for (const el of els) {
+        // Saltar el propio nav y la splash screen (z-200, cubre todo al inicio)
+        if (navRef.current && navRef.current.contains(el)) continue;
+        if (el.closest?.("[data-splash]")) continue;
+
+        let node = el;
+        while (node && node !== document.body) {
+          if (node.tagName === "SECTION" && node.parentElement?.id === "main") {
+            section = node;
+            break;
+          }
+          node = node.parentElement;
+        }
+        if (section) break;
+      }
+      // Solo actualizar si encontramos sección; si no, conservar el estado anterior
+      if (section) {
+        setOnBlue(section.classList.contains("section-blue"));
+      }
+    };
+
+    const schedule = () => {
+      if (rafId !== null) return;
+      rafId = requestAnimationFrame(() => {
+        rafId = null;
+        checkSection();
+      });
+    };
+
+    // Chequeo inicial diferido para esperar a que el splash desaparezca (~2.3s)
+    const initialTimers = [
+      setTimeout(schedule, 100),
+      setTimeout(schedule, 2400),
+    ];
+
+    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("resize", schedule);
+    return () => {
+      window.removeEventListener("scroll", schedule);
+      window.removeEventListener("resize", schedule);
+      if (rafId !== null) cancelAnimationFrame(rafId);
+      initialTimers.forEach(clearTimeout);
+    };
+  }, []);
+
+  // Cerrar menú al hacer clic fuera
   useEffect(() => {
     const onClick = (e) => {
-      if (navRef.current && !navRef.current.contains(e.target)) {
-        setOpen(false);
-      }
+      if (navRef.current && !navRef.current.contains(e.target)) setOpen(false);
     };
     document.addEventListener("click", onClick);
     return () => document.removeEventListener("click", onClick);
   }, []);
 
+  // Colores explícitos en oklch() para evitar problemas de cascada/variables CSS.
+  const COLOR_DARK = "oklch(0.10 0.015 264)";
+  const COLOR_WHITE = "oklch(1 0 0)";
+  const COLOR_BLUE = "oklch(0.40 0.28 264)";
+
+  const logoColor = onBlue ? COLOR_WHITE : COLOR_DARK;
+  const linkColor = onBlue ? COLOR_WHITE : COLOR_BLUE;
+  const lineColor = onBlue ? COLOR_WHITE : COLOR_DARK;
+
   return (
     <nav
       ref={navRef}
-      className="sticky top-0 z-[100] border-b border-flow-border bg-[oklch(0.97_0.012_80/0.88)] backdrop-blur-[12px]"
+      className={`sticky top-0 z-[100] bg-transparent transition-transform duration-300 ease-in-out ${
+        hidden ? "-translate-y-full" : "translate-y-0"
+      }`}
       aria-label="Navegación principal"
     >
       <div className="mx-auto flex h-16 max-w-[2439px] items-center justify-between px-[var(--space-md)]">
         <Link
           href="/"
-          className="font-display text-[clamp(1.25rem,2vw,1.5rem)] font-semibold italic tracking-[-0.001em] text-flow-text"
+          className="nav-logo font-display text-[clamp(1.25rem,2vw,1.5rem)] font-semibold italic tracking-[-0.001em] transition-colors duration-300"
+          style={{ color: logoColor }}
           aria-label="Flow Studio — Inicio"
         >
           Flow Studio Agencia
@@ -55,9 +144,10 @@ export function Nav() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`font-body text-sm font-normal tracking-[0.03em] text-flow-muted transition-colors hover:text-flow-text focus-visible:text-flow-text ${
-                    isActive ? "font-medium text-accent" : ""
+                  className={`nav-logo font-body text-sm font-bold tracking-[0.08em] transition-colors duration-300 focus-visible:text-accent-hover ${
+                    isActive ? "[&::after]:w-full" : ""
                   }`}
+                  style={{ color: linkColor }}
                   aria-current={isActive ? "page" : undefined}
                 >
                   {link.label}
@@ -70,7 +160,7 @@ export function Nav() {
               href={WHATSAPP.advisor}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block w-full whitespace-nowrap rounded-[var(--radius)] bg-flow-text px-5 py-2 text-center font-body text-sm font-medium text-[var(--nav-cta-color)] transition-[background,transform] hover:-translate-y-px hover:bg-accent focus-visible:bg-accent max-md:py-3 md:hidden"
+              className="inline-block w-full whitespace-nowrap btn-fill-dark rounded-[var(--radius)] bg-blue px-5 py-2 text-center font-body text-sm font-medium text-white transition-[background,transform] hover:-translate-y-px max-md:py-3 md:hidden"
               aria-label="Haz crecer tu negocio por WhatsApp"
             >
               Haz crecer tu negocio
@@ -82,7 +172,7 @@ export function Nav() {
           href={WHATSAPP.advisor}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden whitespace-nowrap rounded-[var(--radius)] bg-flow-text px-5 py-2 font-body text-sm font-medium text-[var(--nav-cta-color)] transition-[background,transform] hover:-translate-y-px hover:bg-accent focus-visible:bg-accent md:inline-block"
+          className="hidden whitespace-nowrap btn-fill-dark rounded-[var(--radius)] bg-blue px-5 py-2 font-body text-sm font-medium text-white transition-[background,transform] hover:-translate-y-px md:inline-block"
           aria-label="Haz crecer tu negocio por WhatsApp"
         >
           Haz crecer tu negocio
@@ -96,9 +186,9 @@ export function Nav() {
           aria-controls="nav-links"
           onClick={() => setOpen((v) => !v)}
         >
-          <span className="block h-[1.5px] w-[22px] bg-flow-text" />
-          <span className="block h-[1.5px] w-[22px] bg-flow-text" />
-          <span className="block h-[1.5px] w-[22px] bg-flow-text" />
+          <span className="block h-[1.5px] w-[22px] transition-colors duration-300" style={{ backgroundColor: lineColor }} />
+          <span className="block h-[1.5px] w-[22px] transition-colors duration-300" style={{ backgroundColor: lineColor }} />
+          <span className="block h-[1.5px] w-[22px] transition-colors duration-300" style={{ backgroundColor: lineColor }} />
         </button>
       </div>
     </nav>

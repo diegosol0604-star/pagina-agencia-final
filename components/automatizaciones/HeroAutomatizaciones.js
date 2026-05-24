@@ -10,7 +10,7 @@ export function HeroAutomatizaciones() {
       aria-label="Automatizaciones para tu negocio"
     >
       <div
-        className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_60%_50%_at_80%_20%,oklch(0.85_0.08_175/0.20)_0%,transparent_0%),radial-gradient(ellipse_50%_40%_at_10%_90%,oklch(0.88_0.06_260/0.15)_0%,transparent_55%),var(--bg)]"
+        className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_60%_50%_at_80%_20%,oklch(0.70_0.15_264/0.10)_0%,transparent_60%),radial-gradient(ellipse_50%_40%_at_10%_90%,oklch(0.65_0.18_264/0.08)_0%,transparent_55%),var(--bg)]"
         aria-hidden="true"
       ></div>
       <div className="section-inner relative z-[1]">
@@ -44,7 +44,7 @@ export function HeroAutomatizaciones() {
           presente. Menos trabajo repetitivo, más tiempo para lo que importa.
         </p>
 
-        <BtnPrimary href={WHATSAPP.auto} ariaLabel="Automatizar mi negocio por WhatsApp" className="px-7 py-3.5">
+        <BtnPrimary href={WHATSAPP.auto} ariaLabel="Automatizar mi negocio por WhatsApp" className="btn-fill-dark px-7 py-3.5">
           <WhatsAppIcon />
           Automatizar mi negocio
         </BtnPrimary>

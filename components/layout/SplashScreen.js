@@ -30,8 +30,9 @@ export function SplashScreen() {
     <AnimatePresence>
       {visible && (
         <motion.div
+          data-splash
           className="fixed inset-0 z-[200] flex items-center justify-center"
-          style={{ backgroundColor: "oklch(0.97 0.012 80)" }}
+          style={{ backgroundColor: "oklch(1 0 0)" }}
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
@@ -48,7 +49,7 @@ export function SplashScreen() {
                   className="font-display font-normal italic tracking-[-0.03em]"
                   style={{
                     fontSize: "clamp(3.5rem, 8vw, 8rem)",
-                    color: "oklch(0.13 0.022 260)",
+                    color: "oklch(0.10 0.015 264)",
                     lineHeight: 1,
                   }}
                   initial={{ opacity: 0, x: -50 }}
@@ -62,7 +63,7 @@ export function SplashScreen() {
                   style={{
                     fontSize: "clamp(0.65rem, 1.2vw, 0.9rem)",
                     letterSpacing: "0.28em",
-                    color: "oklch(0.13 0.022 260)",
+                    color: "oklch(0.10 0.015 264)",
                     marginTop: "1rem",
                   }}
                   initial={{ opacity: 0, x: -50 }}
