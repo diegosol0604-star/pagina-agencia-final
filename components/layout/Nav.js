@@ -107,7 +107,7 @@ export function Nav() {
   // Colores explícitos en hex para evitar problemas de cascada/variables/conversión OKLCH.
   const COLOR_DARK = "#0a0d1f";
   const COLOR_WHITE = "#ffffff";
-  const COLOR_BLUE = "#1e40ef";
+  const COLOR_BLUE = "#1730d0";
 
   const logoColor = onBlue ? COLOR_WHITE : COLOR_DARK;
   const linkColor = onBlue ? COLOR_WHITE : COLOR_BLUE;
@@ -160,7 +160,8 @@ export function Nav() {
               href={WHATSAPP.advisor}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block w-full whitespace-nowrap btn-fill-dark rounded-[var(--radius)] bg-blue px-5 py-2 text-center font-body text-sm font-medium text-white transition-[background,transform] hover:-translate-y-px max-md:py-3 md:hidden"
+              className="btn-fill-dark inline-block w-full whitespace-nowrap rounded-[var(--radius)] px-5 py-2 text-center font-body text-sm font-medium text-white transition-[background,transform] hover:-translate-y-px max-md:py-3 md:hidden"
+              style={onBlue ? { backgroundImage: "linear-gradient(to right, #0a0d1f 50%, #ffffff 50%)", color: "#0a0d1f" } : undefined}
               aria-label="Haz crecer tu negocio por WhatsApp"
             >
               Haz crecer tu negocio
@@ -172,7 +173,8 @@ export function Nav() {
           href={WHATSAPP.advisor}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden whitespace-nowrap btn-fill-dark rounded-[var(--radius)] bg-blue px-5 py-2 font-body text-sm font-medium text-white transition-[background,transform] hover:-translate-y-px md:inline-block"
+          className="btn-fill-dark hidden whitespace-nowrap rounded-[var(--radius)] px-5 py-2 font-body text-sm font-medium text-white transition-[background,transform] hover:-translate-y-px md:inline-block"
+          style={onBlue ? { backgroundImage: "linear-gradient(to right, #0a0d1f 50%, #ffffff 50%)", color: "#0a0d1f" } : undefined}
           aria-label="Haz crecer tu negocio por WhatsApp"
         >
           Haz crecer tu negocio

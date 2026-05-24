@@ -10,20 +10,6 @@ export function Hero() {
       className="relative grid min-h-[96vh] grid-rows-[1fr_auto] overflow-hidden px-[var(--space-md)] pb-[var(--space-2xl)] pt-[var(--space-xl)] max-md:flex max-md:min-h-0 max-md:flex-col max-md:items-center max-md:justify-center max-md:gap-[var(--space-lg)] max-md:py-[var(--space-xl)]"
       aria-label="Encabezado principal"
     >
-
-<div
-        className="animate-hero-card-in absolute right-[var(--space-md)] top-[var(--space-lg)] z-[2] mt-[0.1%] min-h-[150px] w-[min(440px,calc(100%-var(--space-md)*2))] max-w-[440px] text-justify max-xl:top-[var(--space-md)] max-xl:max-w-[380px] max-lg:top-[var(--space-sm)] max-lg:max-w-[320px] max-md:static max-md:order-1 max-md:mb-0 max-md:w-full max-md:max-w-full max-md:min-h-0 max-md:text-center"
-        aria-hidden="true"
-      >
-        <span className="absolute right-[7%] top-0 inline-block rounded-[2px] px-10 py-[0.2rem] text-center font-body text-xs font-medium uppercase tracking-[0.17em] text-flow-muted max-xl:right-[5%] max-xl:text-[0.7rem] max-lg:right-[3%] max-lg:px-7 max-lg:text-[0.65rem] max-md:static max-md:mx-0">
-          Marketing Digital &amp; IA Agency México
-        </span>
-        <p className="absolute right-[8%] top-20 m-0 max-w-[405px] font-body text-[0.99rem] font-light leading-[1.65] text-flow-muted max-xl:right-[6%] max-xl:top-[68px] max-xl:max-w-[340px] max-xl:text-[0.9rem] max-lg:right-[4%] max-lg:top-[58px] max-lg:max-w-[280px] max-lg:text-[0.85rem] max-md:static max-md:mt-[var(--space-sm)] max-md:max-w-none">
-          Diseñamos páginas web, branding y rebranding, automatizaciones, campañas de marketing y más. Sin
-          tecnicismos, con resultados concretos.
-        </p>
-      </div>
-
       <div className="relative z-[1] flex flex-col items-center justify-center pb-[1%] pt-[calc(var(--space-2xl)+3rem)] text-center max-md:order-2 max-md:w-full max-md:pt-0">
         <HeroTitles />
         <div className="relative z-[1] flex flex-col items-center gap-[var(--space-md)]">

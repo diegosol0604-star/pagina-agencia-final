@@ -24,7 +24,7 @@ export function Contacto() {
               href={WHATSAPP.main}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 rounded-[var(--radius)] bg-bg px-7 py-4 font-body text-[0.9375rem] font-medium text-[oklch(0.10_0.015_264)] transition-[background,color,transform] hover:-translate-y-0.5 hover:bg-surface hover:text-[oklch(0.10_0.015_264)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-accent"
+              className="btn-fill-dark inline-flex items-center gap-2.5 rounded-[var(--radius)] border border-white/30 px-7 py-4 font-body text-[0.9375rem] font-medium text-white transition-[background,transform] hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-white"
               aria-label="Abrir WhatsApp para contactar a Flow Studio"
             >
               <WhatsAppIcon size={20} />
@@ -108,7 +108,7 @@ export function Contacto() {
               </div>
               <button
                 type="submit"
-                className="w-full cursor-pointer rounded-[var(--radius)] border-0 bg-bg px-7 py-3.5 font-body text-[0.9375rem] font-medium text-[oklch(0.10_0.015_264)] transition-[background,color,transform] hover:-translate-y-px hover:bg-surface hover:text-[oklch(0.10_0.015_264)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-accent"
+                className="btn-fill-dark w-full cursor-pointer rounded-[var(--radius)] border border-white/30 px-7 py-3.5 font-body text-[0.9375rem] font-medium text-white transition-[background,transform] hover:-translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-white"
               >
                 Enviar mensaje
               </button>

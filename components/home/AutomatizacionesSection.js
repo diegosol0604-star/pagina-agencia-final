@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { useState } from "react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeading, SectionLabel } from "@/components/ui/SectionHeader";
 import { ArrowRightIcon } from "@/components/icons/WhatsAppIcon";
@@ -45,91 +42,49 @@ const autoItems = [
   },
 ];
 
-const panels = {
-  antes: '"Contestas 50 mensajes a mano. Cada día. Repitiendo lo mismo. Tu tiempo vale más que eso."',
-  despues:
-    '"El bot responde, filtra y agenda. Tú llegas en la mañana y ves el resumen — sin haberte perdido nada."',
-};
-
 export function AutomatizacionesSection() {
-  const [tab, setTab] = useState("antes");
-
   return (
     <section className="section-pad section-blue" id="automatizaciones" aria-labelledby="auto-heading">
       <div className="section-inner">
-        <FadeIn>
+        <FadeIn className="mb-[var(--space-xl)]">
           <SectionLabel>Automatiza tu negocio</SectionLabel>
           <SectionHeading id="auto-heading">
             ¿Qué puedes automatizar
             <br />
             con Flow Studio?
           </SectionHeading>
-          <p className="mb-[var(--space-xl)] max-w-[48ch] font-body text-[0.9375rem] leading-[1.7] text-flow-muted">
+          <p className="mt-[var(--space-sm)] max-w-[48ch] font-body text-[0.9375rem] leading-[1.7] text-flow-muted">
             Todo lo que te quita tiempo hoy, lo hacemos automático.
           </p>
         </FadeIn>
 
-        <div className="grid grid-cols-1 items-start gap-[var(--space-2xl)] md:grid-cols-2">
-          <FadeIn>
-            <div className="overflow-hidden rounded-[var(--radius)] border border-flow-border bg-surface" role="tabpanel">
-              <div className="flex border-b border-flow-border" role="tablist" aria-label="Comparación antes y después">
-                {["antes", "despues"].map((key) => (
-                  <button
-                    key={key}
-                    type="button"
-                    role="tab"
-                    aria-selected={tab === key}
-                    aria-controls={`panel-${key}`}
-                    className={`flex-1 border-b-2 px-[var(--space-md)] py-[var(--space-sm)] font-body text-[0.8rem] font-medium uppercase tracking-[0.06em] transition-[color,border-color] ${
-                      tab === key
-                        ? "-mb-px border-flow-text text-flow-text"
-                        : "border-transparent text-flow-muted"
-                    }`}
-                    onClick={() => setTab(key)}
-                  >
-                    {key === "antes" ? "Antes" : "Después"}
-                  </button>
-                ))}
-              </div>
+        <FadeIn delayMs={80}>
+          <p className="font-heading mb-[var(--space-md)] text-xs font-bold uppercase tracking-[0.1em] text-flow-muted">
+            Algunos de nuestros sistemas
+          </p>
+          <div
+            className="grid grid-cols-1 gap-x-[var(--space-2xl)] gap-y-0 sm:grid-cols-2"
+            aria-label="Lista de automatizaciones"
+          >
+            {autoItems.map((item) => (
               <div
-                id="panel-antes"
-                className={`p-[var(--space-lg)] ${tab === "antes" ? "block" : "hidden"}`}
-                role="tabpanel"
+                key={item.text}
+                className="flex items-start gap-3 border-b border-flow-border py-[var(--space-md)]"
               >
-                <p className="font-display text-[clamp(1.1rem,2vw,1.4rem)] italic leading-[1.5] text-flow-muted">{panels.antes}</p>
+                {item.icon}
+                <p className="font-body text-[0.9rem] leading-normal text-flow-text">{item.text}</p>
               </div>
-              <div
-                id="panel-despues"
-                className={`p-[var(--space-lg)] ${tab === "despues" ? "block" : "hidden"}`}
-                role="tabpanel"
-              >
-                <p className="font-display text-[clamp(1.1rem,2vw,1.4rem)] italic leading-[1.5] text-flow-text">{panels.despues}</p>
-              </div>
-            </div>
-          </FadeIn>
-
-          <FadeIn delayMs={80} className="-mt-[calc(var(--space-2xl)*1.1)] self-start max-md:mt-0">
-            <p className="font-heading mb-[var(--space-sm)] text-xs font-bold uppercase tracking-[0.1em] text-flow-muted">
-              Algunos de nuestros sistemas
-            </p>
-            <div className="flex flex-col gap-[var(--space-md)]" aria-label="Lista de automatizaciones">
-              {autoItems.map((item) => (
-                <div key={item.text} className="flex items-start gap-3 border-b border-flow-border pb-[var(--space-sm)] last:border-0">
-                  {item.icon}
-                  <p className="font-body text-[0.9rem] leading-normal text-flow-text">{item.text}</p>
-                </div>
-              ))}
-            </div>
-            <Link
-              href="/automatizaciones"
-              className="mt-[var(--space-lg)] inline-flex items-center gap-1.5 border-b border-accent pb-px font-body text-[0.9rem] font-medium text-accent transition-colors hover:border-accent-hover hover:text-accent-hover"
-              aria-label="Ver todas las automatizaciones de Flow Studio"
-            >
-              Ver más automatizaciones
-              <ArrowRightIcon />
-            </Link>
-          </FadeIn>
-        </div>
+            ))}
+          </div>
+          <Link
+            href="/automatizaciones"
+            className="mt-[var(--space-lg)] inline-flex items-center gap-1.5 border-b border-accent pb-px font-body text-[0.9rem] font-medium text-accent transition-colors hover:border-accent-hover hover:text-accent-hover"
+            aria-label="Ver todas las automatizaciones de Flow Studio"
+          >
+            Ver más automatizaciones
+            <ArrowRightIcon />
+          </Link>
+        </FadeIn>
       </div>
     </section>
   );
