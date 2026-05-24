@@ -56,7 +56,7 @@ const services = [
   },
   {
     num: "05",
-    span: "col-span-4 max-[900px]:col-span-6 max-[540px]:col-span-12",
+    span: "col-span-4 max-[900px]:col-span-12 max-[540px]:col-span-12",
     icon: (
       <svg className="mb-[var(--space-md)] h-9 w-9 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
         <circle cx="11" cy="11" r="8" />
