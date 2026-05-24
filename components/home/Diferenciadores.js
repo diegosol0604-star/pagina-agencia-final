@@ -20,8 +20,8 @@ const stats = [
 
 export function Diferenciadores() {
   return (
-    <section className="section-pad relative overflow-hidden bg-surface" id="diferenciadores" aria-labelledby="dif-heading">
-      <ParallaxOrb className="h-[400px] w-[400px] -left-[8%] bottom-[10%] bg-[radial-gradient(ellipse_at_center,oklch(0.45_0.2_260/0.22)_0%,transparent_70%)]" />
+    <section className="section-pad relative overflow-hidden bg-bg" id="diferenciadores" aria-labelledby="dif-heading">
+      <ParallaxOrb className="h-[400px] w-[400px] -left-[8%] bottom-[10%] bg-[radial-gradient(ellipse_at_center,oklch(0.40_0.28_264/0.15)_0%,transparent_70%)]" />
       <div className="section-inner">
         <FadeIn>
           <SectionLabel>¿Por qué nosotros?</SectionLabel>

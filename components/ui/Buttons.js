@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export function BtnPrimary({ href, children, className = "", ariaLabel, external = true }) {
-  const classes = `inline-flex items-center gap-2 rounded-[var(--radius)] bg-flow-text px-10 py-[0.9rem] font-body text-[0.9375rem] font-medium text-bg transition-[background,transform] duration-200 hover:-translate-y-0.5 hover:bg-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-accent ${className}`;
+  const classes = `inline-flex items-center gap-2 rounded-[var(--radius)] bg-blue px-10 py-[0.9rem] font-body text-[0.9375rem] font-medium text-white transition-[background,transform] duration-200 hover:-translate-y-0.5 hover:bg-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-blue ${className}`;
 
   if (external) {
     return (

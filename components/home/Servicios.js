@@ -71,7 +71,7 @@ const services = [
 
 export function Servicios() {
   return (
-    <section className="section-pad bg-surface" id="servicios" aria-labelledby="servicios-heading">
+    <section className="section-pad bg-bg" id="servicios" aria-labelledby="servicios-heading">
       <div className="section-inner">
         <FadeIn className="mb-[var(--space-xl)] flex flex-wrap items-end justify-between gap-[var(--space-md)]">
           <div>
@@ -87,7 +87,7 @@ export function Servicios() {
             <FadeIn
               key={s.num}
               delayMs={s.delay}
-              className={`relative overflow-hidden bg-surface p-[var(--space-xl)] px-[var(--space-lg)] transition-[background,transform] hover:bg-bg ${s.span}`}
+              className={`relative overflow-hidden bg-bg p-[var(--space-xl)] px-[var(--space-lg)] transition-[background,transform] hover:bg-surface ${s.span}`}
             >
               <article role="listitem">
                 <span className="font-display absolute right-[var(--space-md)] top-[var(--space-md)] text-5xl font-normal italic leading-none text-flow-border" aria-hidden="true">

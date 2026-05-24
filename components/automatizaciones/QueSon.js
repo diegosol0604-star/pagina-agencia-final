@@ -5,7 +5,7 @@ import { FlowStepIcon } from "./AutoIcons";
 
 export function QueSon() {
   return (
-    <section className="section-pad bg-surface" id="que-son" aria-labelledby="qs-heading">
+    <section className="section-pad section-blue" id="que-son" aria-labelledby="qs-heading">
       <div className="section-inner">
         <div className="grid grid-cols-1 items-center gap-[var(--space-2xl)] md:grid-cols-2">
           <FadeIn>

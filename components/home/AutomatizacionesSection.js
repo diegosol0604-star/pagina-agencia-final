@@ -55,7 +55,7 @@ export function AutomatizacionesSection() {
   const [tab, setTab] = useState("antes");
 
   return (
-    <section className="section-pad bg-bg" id="automatizaciones" aria-labelledby="auto-heading">
+    <section className="section-pad section-blue" id="automatizaciones" aria-labelledby="auto-heading">
       <div className="section-inner">
         <FadeIn>
           <SectionLabel>Automatiza tu negocio</SectionLabel>

@@ -8,7 +8,7 @@ const WORDS = ["éxito.", "crecimiento.", "futuro.", "despegue."];
 export function NuevaSeccion() {
   return (
     <section
-      className="section-pad bg-bg flex items-center justify-center"
+      className="section-pad section-blue flex items-center justify-center"
       id="nueva-seccion"
       aria-label="Propuesta de valor"
     >
@@ -26,7 +26,7 @@ export function NuevaSeccion() {
           </motion.span>
           <TextRotate
             texts={WORDS}
-            mainClassName="text-bg px-4 py-1 bg-[oklch(0.63_0.18_42)] overflow-hidden rounded-[4px] justify-center"
+            mainClassName="text-[oklch(0.10_0.015_264)] px-4 py-1 bg-white overflow-hidden rounded-[4px] justify-center"
             staggerFrom="last"
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
