@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeading, SectionLabel } from "@/components/ui/SectionHeader";
 import { TIPOS } from "@/lib/automatizaciones-data";
@@ -10,6 +10,7 @@ export function TiposGrid() {
   const sectionRef = useRef(null);
   const panelRef = useRef(null);
   const contentRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -18,12 +19,16 @@ export function TiposGrid() {
     if (!section || !panel || !content) return;
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const mobileQuery = window.matchMedia("(max-width: 767px)");
     let frame = 0;
 
     const update = () => {
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(() => {
-        if (reduceMotion.matches) {
+        const mobile = mobileQuery.matches;
+        setIsMobile(mobile);
+
+        if (reduceMotion.matches || mobile) {
           section.style.setProperty("--tipos-scroll-distance", "0px");
           section.style.setProperty("--tipos-content-y", "0px");
           return;
@@ -50,6 +55,7 @@ export function TiposGrid() {
     window.addEventListener("scroll", update, { passive: true });
     window.addEventListener("resize", update);
     reduceMotion.addEventListener("change", update);
+    mobileQuery.addEventListener("change", update);
 
     return () => {
       cancelAnimationFrame(frame);
@@ -57,6 +63,7 @@ export function TiposGrid() {
       window.removeEventListener("scroll", update);
       window.removeEventListener("resize", update);
       reduceMotion.removeEventListener("change", update);
+      mobileQuery.removeEventListener("change", update);
     };
   }, []);
 
@@ -66,21 +73,25 @@ export function TiposGrid() {
       className="bg-bg"
       id="tipos"
       aria-labelledby="tipos-heading"
-      style={{
-        position: "sticky",
-        top: 0,
-        minHeight: "calc(100vh + var(--tipos-scroll-distance, 0px) + clamp(8rem, 22vh, 18rem))",
-        overflow: "visible",
-      }}
+      style={
+        isMobile
+          ? { position: "relative", minHeight: "auto", overflow: "hidden" }
+          : {
+              position: "sticky",
+              top: 0,
+              minHeight: "calc(100vh + var(--tipos-scroll-distance, 0px) + clamp(8rem, 22vh, 18rem))",
+              overflow: "visible",
+            }
+      }
     >
       <div
         ref={panelRef}
-        className="section-pad h-screen overflow-hidden motion-reduce:h-auto motion-reduce:overflow-visible"
+        className="section-pad h-screen overflow-hidden max-md:h-auto max-md:overflow-visible motion-reduce:h-auto motion-reduce:overflow-visible"
       >
         <div
           ref={contentRef}
-          className="section-inner will-change-transform motion-reduce:transform-none"
-          style={{ transform: "translate3d(0, var(--tipos-content-y, 0px), 0)" }}
+          className="section-inner will-change-transform max-md:transform-none motion-reduce:transform-none"
+          style={{ transform: isMobile ? "none" : "translate3d(0, var(--tipos-content-y, 0px), 0)" }}
         >
           <FadeIn>
             <SectionLabel>Nuestras soluciones</SectionLabel>

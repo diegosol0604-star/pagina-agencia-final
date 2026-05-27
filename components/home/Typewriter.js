@@ -46,7 +46,7 @@ export function Typewriter() {
   }, [charIndex, deleting, wordIndex]);
 
   return (
-    <span className="inline-block min-w-[8ch] whitespace-nowrap text-accent" aria-live="polite">
+    <span className="inline-block min-w-[8ch] whitespace-nowrap text-accent max-md:min-w-[7ch]" aria-live="polite">
       <span>{text}</span>
       <span
         className="ml-0.5 inline-block h-[0.8em] w-0.5 translate-y-[-1px] bg-accent align-middle animate-cursor-blink"

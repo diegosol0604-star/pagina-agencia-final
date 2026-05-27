@@ -15,7 +15,7 @@ export function NuevaSeccion() {
       <LayoutGroup>
         <motion.div
           layout
-          className="flex flex-wrap items-baseline justify-center gap-x-7 text-center font-display text-[clamp(2.8rem,7vw,6rem)] font-normal italic leading-[1.1] tracking-[-0.02em] text-flow-text"
+          className="flex flex-wrap items-baseline justify-center gap-x-7 text-center font-display text-[clamp(2.8rem,7vw,6rem)] font-normal italic leading-[1.1] tracking-[-0.02em] text-flow-text max-md:gap-x-3 max-md:text-[clamp(2.1rem,12vw,3.6rem)]"
           initial={{ scale: 0.6, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -26,7 +26,7 @@ export function NuevaSeccion() {
           </motion.span>
           <TextRotate
             texts={WORDS}
-            mainClassName="text-[oklch(0.10_0.015_264)] px-4 py-1 bg-white overflow-hidden rounded-[4px] justify-center"
+            mainClassName="text-[oklch(0.10_0.015_264)] px-4 py-1 bg-white overflow-hidden rounded-[4px] justify-center max-md:px-2"
             staggerFrom="last"
             initial={{ y: "100%" }}
             animate={{ y: 0 }}

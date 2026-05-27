@@ -134,9 +134,17 @@ export function Nav() {
         <ul
           id="nav-links"
           role="list"
-          className={`items-center gap-[clamp(1rem,3vw,2rem)] max-md:fixed max-md:left-0 max-md:right-0 max-md:top-16 max-md:z-[99] max-md:flex-col max-md:border-b max-md:border-flow-border max-md:bg-bg max-md:p-[var(--space-md)] max-md:gap-[var(--space-md)] ${
+          className={`items-center gap-[clamp(1rem,3vw,2rem)] max-md:fixed max-md:left-0 max-md:right-0 max-md:top-16 max-md:z-[99] max-md:flex-col max-md:border-b max-md:border-[var(--mobile-menu-border,var(--border))] max-md:bg-[var(--mobile-menu-bg,var(--bg))] max-md:p-[var(--space-md)] max-md:gap-[var(--space-md)] ${
             open ? "max-md:flex" : "max-md:hidden"
           } flex`}
+          style={
+            onBlue
+              ? {
+                  "--mobile-menu-bg": COLOR_BLUE,
+                  "--mobile-menu-border": "rgba(255,255,255,0.22)",
+                }
+              : undefined
+          }
         >
           {links.map((link) => {
             const isActive = link.matchPath && pathname === link.matchPath;

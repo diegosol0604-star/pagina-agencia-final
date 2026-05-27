@@ -29,7 +29,7 @@ export function Hero() {
       </div>
 
       <div className="relative z-[1] mb-[60px] ml-[6%] flex w-[clamp(280px,35%,800px)] -translate-y-[30px] items-end justify-between max-xl:ml-[4%] max-xl:w-[clamp(250px,32%,700px)] max-lg:ml-[2%] max-lg:w-[clamp(220px,30%,600px)] max-md:order-3 max-md:mb-0 max-md:ml-0 max-md:w-full max-md:translate-y-0 max-md:flex-col max-md:items-center max-md:gap-[var(--space-sm)] max-md:text-center">
-        <h1 className="animate-hero-text-in min-h-[2.2em] font-display text-[clamp(2.5rem,5.5vw,4.5rem)] font-normal italic leading-[1.1] tracking-[-0.02em] text-flow-text max-md:text-center">
+        <h1 className="animate-hero-text-in min-h-[2.2em] font-display text-[clamp(2.5rem,5.5vw,4.5rem)] font-normal italic leading-[1.1] tracking-[-0.02em] text-flow-text max-md:text-center max-md:text-[clamp(2rem,11vw,2.75rem)]">
           Convierte tus ideas en sistemas que <Typewriter />
         </h1>
       </div>
