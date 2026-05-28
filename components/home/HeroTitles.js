@@ -64,11 +64,11 @@ export function HeroTitles() {
   }, []);
 
   return (
-    <div style={{ perspective: "1100px" }} className="-translate-y-10 max-md:translate-y-0">
+<div style={{ perspective: "1100px" }} className="-translate-y-10 max-md:translate-y-0">
       <p
         ref={wrapperRef}
         style={{ transformStyle: "preserve-3d", willChange: "transform" }}
-        className="relative z-[1] mb-[2%] font-display text-[clamp(100px,10vw,150px)] font-normal italic leading-[0.92] tracking-[-0.03em] text-flow-text max-xl:text-[clamp(110px,9vw,140px)] max-lg:text-[clamp(90px,8vw,120px)] max-md:mb-[var(--space-md)] max-md:text-[clamp(4.1rem,19vw,6rem)]"
+        className="relative z-[1] mb-[2%] font-display text-[clamp(100px,10vw,150px)] font-normal italic leading-[0.92] tracking-[-0.03em] text-flow-text max-xl:text-[clamp(110px,9vw,140px)] max-lg:text-[clamp(90px,8vw,120px)] max-md:mb-1 max-md:text-[clamp(3.2rem,18vw,5.5rem)]"
         aria-hidden="true"
       >
         <span
@@ -80,7 +80,7 @@ export function HeroTitles() {
         </span>
         <span
           ref={line2Ref}
-          className="animate-brand-in-delay mt-[0.2em] block text-[clamp(60px,6vw,85px)] tracking-[-0.01em] max-xl:text-[clamp(65px,5.5vw,80px)] max-lg:text-[clamp(55px,5vw,70px)] max-md:text-[clamp(1.25rem,5.5vw,1.9rem)]"
+          className="animate-brand-in-delay mt-[0.2em] block text-[clamp(60px,6vw,85px)] tracking-[-0.01em] max-xl:text-[clamp(65px,5.5vw,80px)] max-lg:text-[clamp(55px,5vw,70px)] max-md:text-[clamp(1.1rem,5.5vw,1.8rem)]"
           style={{ display: "block", willChange: "transform" }}
         >
           Agencia de Marketing e IA
