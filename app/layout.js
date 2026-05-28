@@ -36,7 +36,7 @@ export const viewport = {
 };
 
 export const metadata = {
-  metadataBase: new URL("https://flowstudio.mx"),
+  metadataBase: new URL("https://flowstudiomkt.com"),
   title: {
     default: "Flow Studio — Agencia de Marketing Digital & IA en México",
     template: "%s — Flow Studio",
@@ -96,7 +96,19 @@ export const metadata = {
   },
   alternates: {
     canonical: "/",
+    languages: {
+      "es-MX": "/",
+      "x-default": "/",
+    },
   },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+  },
+  manifest: "/manifest.webmanifest",
 
 };
 
@@ -120,7 +132,7 @@ export default function RootLayout({ children }) {
               name: "Flow Studio",
               description:
                 "Agencia de marketing digital e inteligencia artificial en México. Automatizaciones, chatbots, CRM, landing pages y estrategia digital.",
-              url: "https://flowstudio.mx",
+              url: "https://flowstudiomkt.com",
               telephone: "+524442081419",
               email: "Flowstudio_agenciamkt@outlook.com",
               address: {
@@ -142,7 +154,7 @@ export default function RootLayout({ children }) {
                 "Estrategia Digital",
                 "Redes Sociales",
               ],
-              image: "https://flowstudio.mx/og-image.jpg",
+              image: "https://flowstudiomkt.com/og-image.jpg",
             }),
           }}
         />
@@ -153,14 +165,14 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "Flow Studio",
-              url: "https://flowstudio.mx",
+              url: "https://flowstudiomkt.com",
               description:
                 "Agencia de marketing digital e inteligencia artificial en México.",
               potentialAction: {
                 "@type": "SearchAction",
                 target: {
                   "@type": "EntryPoint",
-                  urlTemplate: "https://flowstudio.mx/search?q={search_term_string}",
+                  urlTemplate: "https://flowstudiomkt.com/search?q={search_term_string}",
                 },
                 "query-input": "required name=search_term_string",
               },

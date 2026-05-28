@@ -15,7 +15,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: "/",
       },
     ],
-    sitemap: "https://flowstudio.mx/sitemap.xml",
-    host: "https://flowstudio.mx",
+    sitemap: "https://flowstudiomkt.com/sitemap.xml",
+    host: "https://flowstudiomkt.com",
   };
 }

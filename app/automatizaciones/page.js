@@ -25,7 +25,7 @@ export const metadata = {
     title: "Automatizaciones con IA para Negocios | Flow Studio",
     description:
       "Chatbots WhatsApp, CRM, facturación, agendamiento, redes sociales y más. Sistemas que trabajan por ti las 24 horas.",
-    url: "https://flowstudio.mx/automatizaciones",
+    url: "https://flowstudiomkt.com/automatizaciones",
     type: "website",
     images: [
       {
@@ -44,7 +44,11 @@ export const metadata = {
     images: ["/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://flowstudio.mx/automatizaciones",
+    canonical: "https://flowstudiomkt.com/automatizaciones",
+    languages: {
+      "es-MX": "https://flowstudiomkt.com/automatizaciones",
+      "x-default": "https://flowstudiomkt.com/automatizaciones",
+    },
   },
 };
 
@@ -62,13 +66,13 @@ export default function AutomatizacionesPage() {
                 "@type": "ListItem",
                 position: 1,
                 name: "Inicio",
-                item: "https://flowstudio.mx",
+                item: "https://flowstudiomkt.com",
               },
               {
                 "@type": "ListItem",
                 position: 2,
                 name: "Automatizaciones",
-                item: "https://flowstudio.mx/automatizaciones",
+                item: "https://flowstudiomkt.com/automatizaciones",
               },
             ],
           }),

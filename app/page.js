@@ -26,7 +26,7 @@ export const metadata = {
     title: "Flow Studio — Agencia de Marketing Digital & IA en México",
     description:
       "Automatizaciones, chatbots WhatsApp, CRM, landing pages y estrategia digital para hacer crecer tu negocio 24/7.",
-    url: "https://flowstudio.mx",
+    url: "https://flowstudiomkt.com",
     type: "website",
     images: [
       {
@@ -45,7 +45,11 @@ export const metadata = {
     images: ["/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://flowstudio.mx",
+    canonical: "https://flowstudiomkt.com",
+    languages: {
+      "es-MX": "https://flowstudiomkt.com",
+      "x-default": "https://flowstudiomkt.com",
+    },
   },
 };
 
@@ -61,7 +65,7 @@ export default function Home() {
             name: "Flow Studio",
             description:
               "Agencia de marketing digital e inteligencia artificial en México. Automatizaciones, chatbots, CRM, landing pages y estrategia digital.",
-            url: "https://flowstudio.mx",
+            url: "https://flowstudiomkt.com",
             telephone: "+524442081419",
             email: "Flowstudio_agenciamkt@outlook.com",
             address: {
@@ -120,6 +124,14 @@ export default function Home() {
                 },
               ],
             },
+            openingHours: [
+              "Mo 08:30-17:00",
+              "Tu 08:30-17:00",
+              "We 08:30-17:00",
+              "Th 08:30-17:00",
+              "Fr 08:30-17:00",
+              "Sa 09:30-16:00",
+            ],
           }),
         }}
       />
