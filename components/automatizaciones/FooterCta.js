@@ -9,7 +9,7 @@ export function FooterCta() {
         <p className="mb-[var(--space-md)] font-body text-xs font-medium uppercase tracking-[0.12em] text-flow-muted">
           Haz crecer tu negocio
         </p>
-        <h2 className="font-display mb-[var(--space-sm)] text-[clamp(2rem,4.5vw,3.5rem)] font-normal italic leading-[1.1] tracking-[-0.02em] text-white">
+        <h2 id="footer-cta" className="font-display mb-[var(--space-sm)] text-[clamp(2rem,4.5vw,3.5rem)] font-normal italic leading-[1.1] tracking-[-0.02em] text-white">
           ¿Listo para ahorrar tiempo y dinero?
         </h2>
         <p className="mb-[var(--space-xl)] font-body text-base leading-[1.7] text-flow-muted">

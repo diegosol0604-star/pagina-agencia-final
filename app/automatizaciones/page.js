@@ -7,14 +7,153 @@ import { TiposGrid } from "@/components/automatizaciones/TiposGrid";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata = {
-  title: "Automatizaciones — Flow Studio",
+  title: "Automatizaciones con IA para Negocios | Flow Studio",
   description:
-    "Automatizaciones para tu negocio — Flow Studio. Chatbots, CRM, facturación, agendamiento y más. Sistemas que trabajan por ti las 24 horas.",
+    "Automatizaciones inteligentes para tu negocio — Flow Studio. Chatbots WhatsApp, CRM, facturación, agendamiento, redes sociales y más. Sistemas que trabajan por ti las 24 horas. ¡Cotiza ahora al +52 444 208 1419!",
+  keywords: [
+    "automatizaciones IA",
+    "chatbots WhatsApp",
+    "CRM automatizado",
+    "facturación automática",
+    "agendamiento inteligente",
+    "automatización redes sociales",
+    "sistemas inteligentes negocio",
+    "automatización procesos México",
+    "Flow Studio",
+  ],
+  openGraph: {
+    title: "Automatizaciones con IA para Negocios | Flow Studio",
+    description:
+      "Chatbots WhatsApp, CRM, facturación, agendamiento, redes sociales y más. Sistemas que trabajan por ti las 24 horas.",
+    url: "https://flowstudio.mx/automatizaciones",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Automatizaciones Flow Studio — IA para negocios",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Automatizaciones con IA para Negocios | Flow Studio",
+    description:
+      "Chatbots WhatsApp, CRM, facturación, agendamiento, redes sociales y más. Sistemas que trabajan por ti las 24 horas.",
+    images: ["/og-image.jpg"],
+  },
+  alternates: {
+    canonical: "https://flowstudio.mx/automatizaciones",
+  },
 };
 
 export default function AutomatizacionesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Inicio",
+                item: "https://flowstudio.mx",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Automatizaciones",
+                item: "https://flowstudio.mx/automatizaciones",
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Servicios de Automatización",
+            description:
+              "Servicios de automatización inteligente para negocios: chatbots, CRM, facturación, agendamiento, redes sociales y flujos de seguimiento.",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                item: {
+                  "@type": "Service",
+                  name: "Chatbot para WhatsApp",
+                  description:
+                    "Respuestas automáticas 24/7 para calificar leads y agendar citas sin intervención humana.",
+                  provider: { "@type": "LocalBusiness", name: "Flow Studio" },
+                },
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                item: {
+                  "@type": "Service",
+                  name: "Automatización de Instagram y TikTok",
+                  description:
+                    "Programación y publicación automática de contenido, respuestas a comentarios y DMs.",
+                  provider: { "@type": "LocalBusiness", name: "Flow Studio" },
+                },
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                item: {
+                  "@type": "Service",
+                  name: "Sistema de Agendamiento Automático",
+                  description:
+                    "Calendario inteligente que gestiona citas y reuniones sin necesidad de intervención manual.",
+                  provider: { "@type": "LocalBusiness", name: "Flow Studio" },
+                },
+              },
+              {
+                "@type": "ListItem",
+                position: 4,
+                item: {
+                  "@type": "Service",
+                  name: "CRM Automático",
+                  description:
+                    "Sistema de gestión de clientes con seguimiento automatizado, recordatorios y pipeline de ventas.",
+                  provider: { "@type": "LocalBusiness", name: "Flow Studio" },
+                },
+              },
+              {
+                "@type": "ListItem",
+                position: 5,
+                item: {
+                  "@type": "Service",
+                  name: "Automatización de Facturación",
+                  description:
+                    "Emisión, envío y seguimiento de facturas de forma automática, integrado con tu CRM.",
+                  provider: { "@type": "LocalBusiness", name: "Flow Studio" },
+                },
+              },
+              {
+                "@type": "ListItem",
+                position: 6,
+                item: {
+                  "@type": "Service",
+                  name: "Flujos de Seguimiento Automáticos",
+                  description:
+                    "Secuencias automatizadas de correos, WhatsApp y recordatorios para leads y clientes.",
+                  provider: { "@type": "LocalBusiness", name: "Flow Studio" },
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <main id="main">
         <HeroAutomatizaciones />
         <QueSon />

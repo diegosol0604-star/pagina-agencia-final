@@ -26,10 +26,78 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
+export const viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0d1f" },
+  ],
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata = {
-  title: "Flow Studio — Marketing Digital & IA",
+  metadataBase: new URL("https://flowstudio.mx"),
+  title: {
+    default: "Flow Studio — Agencia de Marketing Digital & IA en México",
+    template: "%s — Flow Studio",
+  },
   description:
-    "Flow Studio — Agencia de marketing digital e inteligencia artificial en México. Convierte tus ideas en sistemas que venden.",
+    "Agencia de marketing digital e inteligencia artificial en México. Automatizaciones, chatbots, CRM, landing pages y estrategia digital. Convierte tus ideas en sistemas que venden 24/7.",
+  keywords: [
+    "agencia marketing digital México",
+    "automatizaciones IA",
+    "chatbots WhatsApp",
+    "CRM inteligente",
+    "landing pages",
+    "marketing digital San Luis Potosí",
+    "inteligencia artificial negocios",
+    "automatización de procesos",
+    "agencia de marketing",
+    "Flow Studio",
+  ],
+  authors: [{ name: "Flow Studio" }],
+  creator: "Flow Studio",
+  publisher: "Flow Studio",
+  category: "marketing digital",
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_MX",
+    siteName: "Flow Studio",
+    title: "Flow Studio — Agencia de Marketing Digital & IA en México",
+    description:
+      "Agencia de marketing digital e inteligencia artificial en México. Automatizaciones, chatbots, CRM, landing pages y estrategia digital.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Flow Studio — Marketing Digital & IA",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Flow Studio — Agencia de Marketing Digital & IA en México",
+    description:
+      "Agencia de marketing digital e inteligencia artificial en México. Automatizaciones, chatbots, CRM, landing pages y estrategia digital.",
+    images: ["/og-image.jpg"],
+  },
+  alternates: {
+    canonical: "/",
+  },
+
 };
 
 export default function RootLayout({ children }) {
@@ -39,6 +107,67 @@ export default function RootLayout({ children }) {
       data-scroll-behavior="smooth"
       className={`${cormorant.variable} ${syne.variable} ${dmSans.variable} h-full`}
     >
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <meta name="format-detection" content="telephone=no" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              name: "Flow Studio",
+              description:
+                "Agencia de marketing digital e inteligencia artificial en México. Automatizaciones, chatbots, CRM, landing pages y estrategia digital.",
+              url: "https://flowstudio.mx",
+              telephone: "+524442081419",
+              email: "Flowstudio_agenciamkt@outlook.com",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "San Luis Potosí",
+                addressCountry: "MX",
+              },
+              areaServed: {
+                "@type": "Country",
+                name: "México",
+              },
+              knowsAbout: [
+                "Marketing Digital",
+                "Inteligencia Artificial",
+                "Automatizaciones",
+                "Chatbots WhatsApp",
+                "CRM",
+                "Landing Pages",
+                "Estrategia Digital",
+                "Redes Sociales",
+              ],
+              image: "https://flowstudio.mx/og-image.jpg",
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Flow Studio",
+              url: "https://flowstudio.mx",
+              description:
+                "Agencia de marketing digital e inteligencia artificial en México.",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: {
+                  "@type": "EntryPoint",
+                  urlTemplate: "https://flowstudio.mx/search?q={search_term_string}",
+                },
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <SplashScreen />
         <SkipLink />

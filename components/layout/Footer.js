@@ -25,9 +25,9 @@ export function Footer({
         </div>
 
         <nav aria-label="Mapa del sitio">
-          <p className="font-heading mb-[var(--space-md)] text-[0.7rem] font-bold uppercase tracking-[0.12em] text-[oklch(0.82_0.04_264)]">
+          <h2 className="font-heading mb-[var(--space-md)] text-[0.7rem] font-bold uppercase tracking-[0.12em] text-[oklch(0.82_0.04_264)]">
             Navegación
-          </p>
+          </h2>
           <ul className="flex flex-col gap-[var(--space-xs)]">
             {navLinks.map((link) => (
               <li key={link.href}>
@@ -40,9 +40,9 @@ export function Footer({
         </nav>
 
         <div>
-          <p className="font-heading mb-[var(--space-md)] text-[0.7rem] font-bold uppercase tracking-[0.12em] text-[oklch(0.82_0.04_264)]">
+          <h2 className="font-heading mb-[var(--space-md)] text-[0.7rem] font-bold uppercase tracking-[0.12em] text-[oklch(0.82_0.04_264)]">
             Contacto
-          </p>
+          </h2>
           <ul className="flex flex-col gap-[var(--space-xs)]">
             <li>
               <a

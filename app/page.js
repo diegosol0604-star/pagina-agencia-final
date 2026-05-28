@@ -8,9 +8,121 @@ import { NuevaSeccion } from "@/components/home/NuevaSeccion";
 import { Proceso } from "@/components/home/Proceso";
 import { Servicios } from "@/components/home/Servicios";
 
+export const metadata = {
+  title: "Agencia de Marketing Digital & IA en México | Flow Studio",
+  description:
+    "Flow Studio — Agencia de marketing digital e inteligencia artificial en México. Automatizaciones, chatbots WhatsApp, CRM, landing pages y estrategia digital para hacer crecer tu negocio 24/7. ¡Contáctanos al +52 444 208 1419!",
+  keywords: [
+    "agencia marketing digital",
+    "inteligencia artificial negocios",
+    "automatizaciones",
+    "chatbots WhatsApp",
+    "CRM",
+    "landing pages",
+    "marketing digital México",
+    "Flow Studio",
+  ],
+  openGraph: {
+    title: "Flow Studio — Agencia de Marketing Digital & IA en México",
+    description:
+      "Automatizaciones, chatbots WhatsApp, CRM, landing pages y estrategia digital para hacer crecer tu negocio 24/7.",
+    url: "https://flowstudio.mx",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Flow Studio — Marketing Digital & IA",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Flow Studio — Agencia de Marketing Digital & IA en México",
+    description:
+      "Automatizaciones, chatbots WhatsApp, CRM, landing pages y estrategia digital para hacer crecer tu negocio 24/7.",
+    images: ["/og-image.jpg"],
+  },
+  alternates: {
+    canonical: "https://flowstudio.mx",
+  },
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Flow Studio",
+            description:
+              "Agencia de marketing digital e inteligencia artificial en México. Automatizaciones, chatbots, CRM, landing pages y estrategia digital.",
+            url: "https://flowstudio.mx",
+            telephone: "+524442081419",
+            email: "Flowstudio_agenciamkt@outlook.com",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "San Luis Potosí",
+              addressCountry: "MX",
+            },
+            areaServed: "México",
+            serviceArea: {
+              "@type": "Country",
+              name: "México",
+            },
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Servicios de Marketing Digital",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Automatizaciones con IA",
+                    description: "Sistemas inteligentes que trabajan 24/7 para tu negocio.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Landing Pages & Sitios Web",
+                    description: "Diseño web optimizado para conversión.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Estrategia Digital",
+                    description: "Planes personalizados para escalar tu negocio.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Manejo de Redes Sociales",
+                    description: "Gestión profesional de Instagram, TikTok y más.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Branding & Identidad de Marca",
+                    description: "Construcción de marcas memorables y consistentes.",
+                  },
+                },
+              ],
+            },
+          }),
+        }}
+      />
       <main id="main">
         <Hero />
         <NuevaSeccion />

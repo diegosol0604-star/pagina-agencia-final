@@ -10,8 +10,9 @@ export function NuevaSeccion() {
     <section
       className="mobile-screen-section section-pad section-blue flex items-center justify-center"
       id="nueva-seccion"
-      aria-label="Propuesta de valor"
+      aria-labelledby="nueva-seccion-heading"
     >
+      <h2 id="nueva-seccion-heading" className="sr-only">Impulsa tu negocio con Flow Studio</h2>
       <LayoutGroup>
         <motion.div
           layout
