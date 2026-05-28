@@ -365,6 +365,10 @@ body:not([data-splash-done]) .animate-hero-card-in {
     min-height: auto;
   }
 
+  #main > section.mobile-screen-section {
+    min-height: calc(100svh - 4rem);
+  }
+
   #main > section:not(:first-child) {
     border-radius: 14px 14px 0 0;
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.12);

@@ -7,12 +7,12 @@ import { HeroTitles } from "./HeroTitles";
 export function Hero() {
   return (
     <section
-      className="relative grid min-h-[96vh] grid-rows-[1fr_auto] overflow-hidden px-[var(--space-md)] pb-[var(--space-2xl)] pt-[var(--space-xl)] max-md:flex max-md:min-h-0 max-md:flex-col max-md:items-center max-md:justify-center max-md:gap-[var(--space-lg)] max-md:py-[var(--space-xl)]"
+      className="mobile-screen-section relative grid min-h-[96vh] grid-rows-[1fr_auto] overflow-hidden px-[var(--space-md)] pb-[var(--space-2xl)] pt-[var(--space-xl)] max-md:flex max-md:flex-col max-md:items-center max-md:justify-between max-md:gap-[var(--space-lg)] max-md:pb-[clamp(2.5rem,10svh,5rem)] max-md:pt-[clamp(3rem,12svh,6rem)]"
       aria-label="Encabezado principal"
     >
       <div className="relative z-[1] flex flex-col items-center justify-center pb-[1%] pt-[calc(var(--space-2xl)+3rem)] text-center max-md:order-2 max-md:w-full max-md:pt-0">
         <HeroTitles />
-        <div className="relative z-[1] flex flex-col items-center gap-[var(--space-md)]">
+        <div className="relative z-[1] flex flex-col items-center gap-[var(--space-md)] max-md:gap-[var(--space-sm)]">
           <BtnPrimary
             href={WHATSAPP.main}
             ariaLabel="Contáctanos por WhatsApp"

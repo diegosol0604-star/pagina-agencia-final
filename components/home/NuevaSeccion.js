@@ -8,7 +8,7 @@ const WORDS = ["éxito.", "crecimiento.", "futuro.", "despegue."];
 export function NuevaSeccion() {
   return (
     <section
-      className="section-pad section-blue flex items-center justify-center"
+      className="mobile-screen-section section-pad section-blue flex items-center justify-center"
       id="nueva-seccion"
       aria-label="Propuesta de valor"
     >

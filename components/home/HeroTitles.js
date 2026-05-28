@@ -64,11 +64,11 @@ export function HeroTitles() {
   }, []);
 
   return (
-    <div style={{ perspective: "1100px" }} className="-translate-y-10">
+    <div style={{ perspective: "1100px" }} className="-translate-y-10 max-md:translate-y-0">
       <p
         ref={wrapperRef}
         style={{ transformStyle: "preserve-3d", willChange: "transform" }}
-        className="relative z-[1] mb-[2%] font-display text-[clamp(100px,10vw,150px)] font-normal italic leading-[0.92] tracking-[-0.03em] text-flow-text max-xl:text-[clamp(110px,9vw,140px)] max-lg:text-[clamp(90px,8vw,120px)] max-md:mb-[var(--space-lg)] max-md:text-[clamp(3.5rem,15vw,6rem)]"
+        className="relative z-[1] mb-[2%] font-display text-[clamp(100px,10vw,150px)] font-normal italic leading-[0.92] tracking-[-0.03em] text-flow-text max-xl:text-[clamp(110px,9vw,140px)] max-lg:text-[clamp(90px,8vw,120px)] max-md:mb-[var(--space-md)] max-md:text-[clamp(4.1rem,19vw,6rem)]"
         aria-hidden="true"
       >
         <span
