@@ -3,7 +3,7 @@
 import { LayoutGroup, motion } from "motion/react";
 import { TextRotate } from "@/components/ui/TextRotate";
 
-const WORDS = ["éxito.", "crecimiento.", "futuro.", "despegue."];
+const WORDS = ["éxito.", "crecimiento.", "futuro.", "cambio."];
 
 export function NuevaSeccion() {
   return (
