@@ -123,6 +123,7 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <meta name="format-detection" content="telephone=no" />
+        <meta name="google-site-verification" content="l-reThStT9dDd1KpDnTpHH46hkRyO0tIHuavMLpnUPs" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
