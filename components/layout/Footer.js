@@ -1,5 +1,27 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { EMAIL, WHATSAPP } from "@/lib/site";
+
+const NAV_H = 64;
+
+function getOffsetTop(el) {
+  let top = 0;
+  while (el) {
+    top += el.offsetTop;
+    el = el.offsetParent;
+  }
+  return top;
+}
+
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  requestAnimationFrame(() => {
+    window.scrollTo({ top: getOffsetTop(el) - NAV_H, behavior: "smooth" });
+  });
+}
 
 const navLinks = [
   { href: "/#servicios", label: "Servicios" },
@@ -13,6 +35,21 @@ export function Footer({
   tagline = "Marketing digital e inteligencia artificial para negocios mexicanos que quieren crecer.",
   variant = "default",
 }) {
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleHashClick = (e, href) => {
+    e.preventDefault();
+    const id = href.split("#")[1];
+
+    if (pathname === "/") {
+      scrollToSection(id);
+      window.history.replaceState(null, "", "/#" + id);
+    } else {
+      sessionStorage.setItem("navScrollTo", id);
+      router.push("/");
+    }
+  };
   return (
     <footer
       className="border-t border-[#06104f] bg-[#070e5a] px-[var(--space-md)] py-[var(--space-xl)] pb-[var(--space-lg)] text-white"
@@ -29,13 +66,27 @@ export function Footer({
             Navegación
           </h2>
           <ul className="flex flex-col gap-[var(--space-xs)]">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link href={link.href} className="font-body text-sm text-[oklch(0.92_0.04_264)] transition-colors hover:text-white">
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {navLinks.map((link) => {
+              const isHash = link.href.includes("#");
+
+              return (
+                <li key={link.href}>
+                  {isHash ? (
+                    <a
+                      href={link.href}
+                      onClick={(e) => handleHashClick(e, link.href)}
+                      className="font-body text-sm text-[oklch(0.92_0.04_264)] transition-colors hover:text-white"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link href={link.href} className="font-body text-sm text-[oklch(0.92_0.04_264)] transition-colors hover:text-white">
+                      {link.label}
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </nav>
 

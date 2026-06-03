@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { WHATSAPP } from "@/lib/site";
 
 const links = [
@@ -12,8 +12,28 @@ const links = [
   { href: "/#faq", label: "FAQ" },
 ];
 
+const NAV_H = 64;
+
+function getOffsetTop(el) {
+  let top = 0;
+  while (el) {
+    top += el.offsetTop;
+    el = el.offsetParent;
+  }
+  return top;
+}
+
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  requestAnimationFrame(() => {
+    window.scrollTo({ top: getOffsetTop(el) - NAV_H, behavior: "smooth" });
+  });
+}
+
 export function Nav() {
   const pathname = usePathname();
+  const router = useRouter();
   const [open, setOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [onBlue, setOnBlue] = useState(false);
@@ -95,6 +115,43 @@ export function Nav() {
     };
   }, []);
 
+  // Manejar clics en links con hash
+  const handleHashClick = useCallback(
+    (e, href) => {
+      e.preventDefault();
+      const id = href.split("#")[1];
+
+      if (pathname === "/") {
+        scrollToSection(id);
+        window.history.replaceState(null, "", "/#" + id);
+      } else {
+        sessionStorage.setItem("navScrollTo", id);
+        router.push("/");
+      }
+      setOpen(false);
+    },
+    [pathname, router]
+  );
+
+  // Después de navegar a / desde otra página, hacer scroll a la sección guardada
+  useEffect(() => {
+    if (pathname === "/") {
+      const hash = sessionStorage.getItem("navScrollTo");
+      if (hash) {
+        sessionStorage.removeItem("navScrollTo");
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            const el = document.getElementById(hash);
+            if (el) {
+              window.scrollTo({ top: getOffsetTop(el) - NAV_H, behavior: "smooth" });
+              window.history.replaceState(null, "", "/#" + hash);
+            }
+          });
+        });
+      }
+    }
+  }, [pathname]);
+
   // Cerrar menú al hacer clic fuera
   useEffect(() => {
     const onClick = (e) => {
@@ -148,18 +205,33 @@ export function Nav() {
         >
           {links.map((link) => {
             const isActive = link.matchPath && pathname === link.matchPath;
+            const isHash = link.href.includes("#");
+            const linkClass = `nav-logo font-body text-sm font-bold tracking-[0.08em] transition-colors duration-300 focus-visible:text-accent-hover ${
+              isActive ? "[&::after]:w-full" : ""
+            }`;
+
             return (
               <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className={`nav-logo font-body text-sm font-bold tracking-[0.08em] transition-colors duration-300 focus-visible:text-accent-hover ${
-                    isActive ? "[&::after]:w-full" : ""
-                  }`}
-                  style={{ color: linkColor }}
-                  aria-current={isActive ? "page" : undefined}
-                >
-                  {link.label}
-                </Link>
+                {isHash ? (
+                  <a
+                    href={link.href}
+                    onClick={(e) => handleHashClick(e, link.href)}
+                    className={linkClass}
+                    style={{ color: linkColor }}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    href={link.href}
+                    className={linkClass}
+                    style={{ color: linkColor }}
+                    aria-current={isActive ? "page" : undefined}
+                    onClick={() => setOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                )}
               </li>
             );
           })}
