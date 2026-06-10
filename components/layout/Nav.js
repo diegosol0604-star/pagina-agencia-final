@@ -39,6 +39,7 @@ export function Nav() {
   const [onBlue, setOnBlue] = useState(false);
   const navRef = useRef(null);
   const lastScrollY = useRef(0);
+  const checkSectionRef = useRef(null);
 
   // Ocultar/mostrar al hacer scroll
   useEffect(() => {
@@ -91,6 +92,8 @@ export function Nav() {
       }
     };
 
+    checkSectionRef.current = checkSection;
+
     const schedule = () => {
       if (rafId !== null) return;
       rafId = requestAnimationFrame(() => {
@@ -114,6 +117,14 @@ export function Nav() {
       initialTimers.forEach(clearTimeout);
     };
   }, []);
+
+  // Re-detectar sección al cambiar de ruta
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      checkSectionRef.current?.();
+    }, 100);
+    return () => clearTimeout(timeout);
+  }, [pathname]);
 
   // Manejar clics en links con hash
   const handleHashClick = useCallback(
