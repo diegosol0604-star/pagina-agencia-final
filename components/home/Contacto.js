@@ -45,6 +45,7 @@ export function Contacto() {
               action={`mailto:${EMAIL}`}
               method="POST"
               encType="text/plain"
+              autoComplete="off"
               aria-label="Formulario de contacto Flow Studio"
             >
               <div className="flex flex-col gap-1.5">
@@ -57,7 +58,7 @@ export function Contacto() {
                   id="nombre"
                   name="nombre"
                   required
-                  autoComplete="name"
+                  autoComplete="off"
                   placeholder="Tu nombre completo"
                 />
               </div>
@@ -71,6 +72,7 @@ export function Contacto() {
                   id="negocio"
                   name="negocio"
                   required
+                  autoComplete="off"
                   placeholder="¿Cómo se llama tu negocio?"
                 />
               </div>
@@ -78,23 +80,27 @@ export function Contacto() {
                 <label htmlFor="servicio" className="font-body text-[0.8rem] font-medium tracking-[0.04em] text-white/70">
                   Servicio de interés
                 </label>
-                <select
-                  className="w-full cursor-pointer appearance-none rounded-[var(--radius)] border border-white/20 bg-white bg-[length:12px_8px] bg-[position:right_1rem_center] bg-no-repeat px-4 py-3 pr-10 font-body text-[0.9375rem] text-[#0a0d1f] transition-[border-color] focus:border-white focus:outline-none"
-                  style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' fill='none' stroke-width='1.5'/%3E%3C/svg%3E")`,
-                  }}
-                  id="servicio"
-                  name="servicio"
-                  defaultValue=""
-                >
-                  <option value="">Selecciona una opción</option>
-                  <option value="campanas">Campañas de Marketing</option>
-                  <option value="branding">Branding</option>
-                  <option value="seo">SEO</option>
-                  <option value="landing">Landing Page & Sitio Web</option>
-                  <option value="automatizaciones">Automatizaciones & Chatbot</option>
-                  <option value="platicar">No sé aún — quiero platicar</option>
-                </select>
+                <div className="relative">
+                  <select
+                    className="w-full cursor-pointer appearance-none rounded-[var(--radius)] border border-white/20 bg-white px-4 py-3 pr-10 font-body text-[0.9375rem] text-[#0a0d1f] transition-[border-color] focus:border-white focus:outline-none"
+                    id="servicio"
+                    name="servicio"
+                    autoComplete="off"
+                    defaultValue=""
+                  >
+                    <option value="">Selecciona una opción</option>
+                    <option value="campanas">Campañas de Marketing</option>
+                    <option value="branding">Branding</option>
+                    <option value="seo">SEO</option>
+                    <option value="landing">Landing Page & Sitio Web</option>
+                    <option value="automatizaciones">Automatizaciones & Chatbot</option>
+                    <option value="platicar">No sé aún — quiero platicar</option>
+                  </select>
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute right-4 top-1/2 h-2 w-2 -translate-y-1/2 rotate-45 border-b border-r border-[#888]"
+                  />
+                </div>
               </div>
               <div className="flex flex-col gap-1.5">
                 <label htmlFor="mensaje" className="font-body text-[0.8rem] font-medium tracking-[0.04em] text-white/70">
@@ -104,6 +110,7 @@ export function Contacto() {
                   className="min-h-[100px] w-full resize-y rounded-[var(--radius)] border border-white/20 bg-white px-4 py-3 font-body text-[0.9375rem] text-[#0a0d1f] transition-[border-color] placeholder:text-gray-400 focus:border-white focus:outline-none"
                   id="mensaje"
                   name="mensaje"
+                  autoComplete="off"
                   placeholder="Cuéntanos brevemente qué necesitas..."
                 />
               </div>
