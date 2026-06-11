@@ -67,7 +67,7 @@ export default function Home() {
               "Agencia de marketing digital e inteligencia artificial en México. Automatizaciones, chatbots, CRM, landing pages y estrategia digital.",
             url: "https://flowstudiomkt.com",
             telephone: "+524442081419",
-            email: "Flowstudio_agenciamkt@outlook.com",
+            email: "flowmktstudio@gmail.com",
             address: {
               "@type": "PostalAddress",
               addressLocality: "San Luis Potosí",
