@@ -1,0 +1,17 @@
+Capturas del portafolio.
+
+Archivos que usa el sitio (WebP 1440x900, generados desde los PNG originales):
+
+  sitioweb-1.webp   -> Dr. Jesus Rafael Lara Zarate (ortodoncia)
+  sitioweb-2.webp   -> Aluco San Luis (construccion industrial)
+  sistema-1.webp    -> Sistema de inventario y ventas
+  catalogo-1.webp   -> Catalogo digital de productos
+
+Los PNG originales quedaron en las subcarpetas del mismo nombre.
+
+Para agregar o reemplazar una captura:
+- Captura con el navegador a 1440x900 (o un poco mas, se recorta anclado arriba).
+- Conviertela a WebP y ponla aqui con el nombre que apunta lib/portafolio-data.js.
+- Lo importante de la pantalla debe quedar en la parte superior.
+
+Mientras el archivo no exista, la tarjeta muestra un placeholder con el giro.
