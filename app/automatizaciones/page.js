@@ -7,7 +7,7 @@ import { TiposGrid } from "@/components/automatizaciones/TiposGrid";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata = {
-  title: "Automatizaciones con IA para Negocios | Flow Studio",
+  title: "Automatizaciones con IA para Negocios",
   description:
     "Automatizaciones inteligentes para tu negocio — Flow Studio. Chatbots WhatsApp, CRM, facturación, agendamiento, redes sociales y más. Sistemas que trabajan por ti las 24 horas. ¡Cotiza ahora al +52 444 208 1419!",
   keywords: [

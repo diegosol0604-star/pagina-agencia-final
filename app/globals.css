@@ -364,9 +364,17 @@ body:not([data-splash-done]) .animate-hero-card-in {
 #main > section:nth-child(6) { z-index: 6; }
 #main > section:nth-child(7) { z-index: 7; }
 #main > section:nth-child(8) { z-index: 8; }
+#main > section:nth-child(9) { z-index: 9; }
 
 #main > section:last-child {
   min-height: auto;
+}
+
+/* Secciones que necesitan más recorrido antes de que la siguiente las cubra.
+   Se alarga la sección sin agregarle contenido: el extra es espacio vacío que
+   hay que scrollear, así da tiempo de leerla completa. */
+#main > section.section-dwell {
+  min-height: 145vh;
 }
 
 @media (max-width: 900px) {
@@ -381,6 +389,11 @@ body:not([data-splash-done]) .animate-hero-card-in {
   #main > section {
     position: relative;
     top: auto;
+    min-height: auto;
+  }
+
+  /* En móvil no hay apilado sticky, así que el espacio extra solo estorbaría */
+  #main > section.section-dwell {
     min-height: auto;
   }
 

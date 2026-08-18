@@ -5,6 +5,7 @@ import { Diferenciadores } from "@/components/home/Diferenciadores";
 import { FAQ } from "@/components/home/FAQ";
 import { Hero } from "@/components/home/Hero";
 import { NuevaSeccion } from "@/components/home/NuevaSeccion";
+import { PortafolioSection } from "@/components/home/PortafolioSection";
 import { Proceso } from "@/components/home/Proceso";
 import { Servicios } from "@/components/home/Servicios";
 
@@ -140,6 +141,7 @@ export default function Home() {
         <NuevaSeccion />
         <Servicios />
         <AutomatizacionesSection />
+        <PortafolioSection />
         <Diferenciadores />
         <Proceso />
         <FAQ />

@@ -8,6 +8,7 @@ import { WHATSAPP } from "@/lib/site";
 const links = [
   { href: "/#servicios", label: "Servicios" },
   { href: "/automatizaciones", label: "Automatizaciones", matchPath: "/automatizaciones" },
+  { href: "/portafolio", label: "Portafolio", matchPath: "/portafolio" },
   { href: "/#proceso", label: "Proceso" },
   { href: "/#faq", label: "FAQ" },
 ];
